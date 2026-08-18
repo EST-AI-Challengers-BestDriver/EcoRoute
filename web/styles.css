@@ -757,3 +757,97 @@ h1,
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+.loading-screen .text-shimmer {
+  --shimmer-duration: 2s;
+  --shimmer-spread: 55px;
+
+  position: relative;
+  display: inline-block;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      transparent calc(50% - var(--shimmer-spread)),
+      rgba(255, 255, 255, 1),
+      transparent calc(50% + var(--shimmer-spread))
+    ),
+    linear-gradient(
+      rgba(218, 243, 255, 0.48),
+      rgba(218, 243, 255, 0.48)
+    );
+
+  background-size:
+    250% 100%,
+    100% 100%;
+
+  background-position:
+    100% center,
+    center;
+
+  background-repeat: no-repeat;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  animation:
+    eco-text-shimmer var(--shimmer-duration)
+    linear
+    infinite;
+}
+
+
+@keyframes eco-text-shimmer {
+  from {
+    background-position:
+      100% center,
+      center;
+  }
+
+  to {
+    background-position:
+      -100% center,
+      center;
+  }
+}
+
+
+/* 메인 로딩 문구 */
+.loading-screen h2.text-shimmer {
+  margin: 14px 0 14px;
+
+  font-size: 36px;
+  font-weight: 800;
+
+  letter-spacing: -1.4px;
+}
+
+
+/* 단계별 설명 문구 */
+.loading-screen #loading-step.text-shimmer {
+  --shimmer-duration: 2.4s;
+  --shimmer-spread: 38px;
+
+  margin-top: 4px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  letter-spacing: -0.2px;
+}
+
+
+/* 사용자가 애니메이션 감소를 설정한 경우 */
+@media (prefers-reduced-motion: reduce) {
+  .loading-screen .text-shimmer {
+    animation: none;
+
+    background: none;
+
+    color: rgba(225, 246, 255, 0.9);
+    -webkit-text-fill-color: currentColor;
+  }
+}
