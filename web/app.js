@@ -292,8 +292,8 @@ function initializeSetupMap() {
   state.setupMap = L.map("setup-map", {
     zoomControl: false,
     preferCanvas: true,
-    maxBounds: selectionBounds.pad(.06),
-    maxBoundsViscosity: 1,
+    maxBounds: selectionBounds.pad(.50),
+    maxBoundsViscosity: 0.3,
     maxZoom: 17,
   });
   tileLayer().addTo(state.setupMap);
@@ -605,6 +605,11 @@ function showImpact(routeId) {
   const chosen = state.result.routes.find((route) => route.route_id === routeId);
   const fastest = state.result.routes.find((route) => route.is_fastest_route);
   if (!chosen || !fastest) return;
+  document.querySelector("#impact-title").textContent = chosen.is_fastest_route && chosen.is_greenest_route
+    ? "가장 빠르면서 친환경적인 길을 선택했어요"
+    : chosen.is_fastest_route
+      ? "가장 빠른 길을 선택했어요"
+      : "대안 경로를 선택했어요";
   const relativePercent = fastest.total_energy_kwh > 0
     ? chosen.total_energy_kwh / fastest.total_energy_kwh * 100
     : 100;
