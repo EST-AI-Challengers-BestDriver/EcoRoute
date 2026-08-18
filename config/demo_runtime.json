@@ -9,6 +9,7 @@
       "label": "Ann Arbor, MI",
       "short_label": "Ann Arbor",
       "graph_path": "data/processed/maps/ann_arbor/ann_arbor_drive_enriched.graphml",
+      "place_labels_path": "data/processed/maps/ann_arbor/node_place_labels.json",
       "traffic_profile_path": "data/processed/traffic/ann_arbor/edge_hourly_profiles.csv.gz",
       "route_candidate_count": 4,
       "penalty_candidate_count": 8,

@@ -17,6 +17,9 @@ const state = {
 
 const routeColors = ["#356feb", "#ff7a1a", "#19a956", "#a458ec"];
 const WEEKLY_STORAGE_KEY = "ecoroute-weekly-records-v2";
+const DIESEL_KWH_PER_LITER = 9.8;
+const DIESEL_PRICE_KRW_PER_LITER = 1774;
+const CO2_KG_PER_KWH = 8.887 / 33.7;
 const weekDays = ["월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일"];
 const screens = [...document.querySelectorAll(".screen")];
 
@@ -376,7 +379,12 @@ function selectNearestNode(latlng) {
 }
 
 function setPoint(kind, node) {
-  state.points[kind] = { node_id: node.id, lat: node.lat, lon: node.lon };
+  state.points[kind] = {
+    node_id: node.id,
+    lat: node.lat,
+    lon: node.lon,
+    ...(node.place_label ? { place_label: node.place_label } : {}),
+  };
   if (state.markers[kind]) state.setupMap.removeLayer(state.markers[kind]);
   const isStart = kind === "start";
   state.markers[kind] = L.circleMarker([node.lat, node.lon], {
@@ -386,7 +394,10 @@ function setPoint(kind, node) {
     permanent: true, direction: "top", offset: [0, -8], className: "node-tooltip",
   });
   const field = document.querySelector(`#${kind === "start" ? "start" : "destination"}-field strong`);
-  field.textContent = `Node ${node.id} · ${node.lat.toFixed(5)}, ${node.lon.toFixed(5)}`;
+  const coordinates = `Node ${node.id} · ${node.lat.toFixed(5)}, ${node.lon.toFixed(5)}`;
+  const usePlaceLabel = state.config.region === "ann_arbor" && node.place_label;
+  field.textContent = usePlaceLabel ? node.place_label : coordinates;
+  field.title = usePlaceLabel ? coordinates : "";
   updateSubmitState();
 }
 
@@ -674,6 +685,8 @@ function recordWeeklyResult(chosen, fastest, reductionPercent) {
     reductionPercent,
     baselineEnergy: fastest.total_energy_kwh,
     chosenEnergy: chosen.total_energy_kwh,
+    baselineCo2: fastest.total_co2_kg,
+    chosenCo2: chosen.total_co2_kg,
     region: state.result.region,
     regionLabel: state.result.region_label || state.result.region,
     routeLabel: routeLabel(chosen),
@@ -729,31 +742,49 @@ function renderWeeklyReport() {
   const weeklyReduction = baselineTotal > 0
     ? (1 - chosenTotal / baselineTotal) * 100
     : 0;
-  const averageReduction = completed
-    ? state.weeklyRecords.reduce(
-      (total, record) => total + Number(record.reductionPercent), 0
-    ) / completed
-    : 0;
-  const bestRecord = completed
-    ? state.weeklyRecords.reduce((best, record) => (
-      record.reductionPercent > best.reductionPercent ? record : best
-    ))
-    : null;
+  const chosenCo2Total = state.weeklyRecords.reduce((total, record) => {
+    const storedCo2 = Number(record.chosenCo2);
+    return total + (Number.isFinite(storedCo2)
+      ? storedCo2
+      : Number(record.chosenEnergy) * CO2_KG_PER_KWH);
+  }, 0);
+  const baselineCo2Total = state.weeklyRecords.reduce((total, record) => {
+    const storedCo2 = Number(record.baselineCo2);
+    return total + (Number.isFinite(storedCo2)
+      ? storedCo2
+      : Number(record.baselineEnergy) * CO2_KG_PER_KWH);
+  }, 0);
+  const chosenFuelLiters = chosenTotal / DIESEL_KWH_PER_LITER;
+  const baselineFuelLiters = baselineTotal / DIESEL_KWH_PER_LITER;
+  const chosenFuelCost = chosenFuelLiters * DIESEL_PRICE_KRW_PER_LITER;
+  const baselineFuelCost = baselineFuelLiters * DIESEL_PRICE_KRW_PER_LITER;
+  const savedFuelCost = baselineFuelCost - chosenFuelCost;
+  const decimal = (value, digits = 2) => Number(value).toLocaleString("ko-KR", {
+    minimumFractionDigits: digits,
+    maximumFractionDigits: digits,
+  });
+  const won = (value) => Math.round(Math.abs(value)).toLocaleString("ko-KR");
+  const setMetric = (selector, value, unit, digits = 2) => {
+    document.querySelector(selector).innerHTML = `${decimal(value, digits)} <small>${unit}</small>`;
+  };
 
   document.querySelector("#weekly-progress").textContent = `${completed} / 7일`;
-  document.querySelector("#weekly-total-label").textContent = weeklyReduction < 0
-    ? "주간 총 CO₂ 증가율"
-    : "주간 총 CO₂ 절감률";
-  document.querySelector("#weekly-total").textContent = `${Math.abs(weeklyReduction).toFixed(1)}%`;
-  document.querySelector("#weekly-total").closest(".weekly-summary")
-    .classList.toggle("increase", weeklyReduction < 0);
-  const averageElement = document.querySelector("#weekly-average");
-  averageElement.textContent = `${averageReduction.toFixed(1)}%`;
-  averageElement.classList.toggle("negative", averageReduction < 0);
-  document.querySelector("#weekly-best").textContent = bestRecord?.day || "-";
-  document.querySelector("#weekly-best-value").textContent = bestRecord
-    ? `${bestRecord.reductionPercent.toFixed(1)}% · ${bestRecord.regionLabel}`
-    : "아직 기록이 없습니다";
+  setMetric("#weekly-co2-chosen", chosenCo2Total, "kgCO₂eq");
+  setMetric("#weekly-co2-fastest", baselineCo2Total, "kgCO₂eq");
+  setMetric("#weekly-fuel-chosen", chosenFuelLiters, "L");
+  setMetric("#weekly-fuel-fastest", baselineFuelLiters, "L");
+  setMetric("#weekly-energy-chosen", chosenTotal, "kWh");
+  setMetric("#weekly-energy-fastest", baselineTotal, "kWh");
+  document.querySelector("#weekly-cost-chosen").innerHTML = `${won(chosenFuelCost)}<small>원</small>`;
+  document.querySelector("#weekly-cost-fastest").innerHTML = `${won(baselineFuelCost)}<small>원</small>`;
+  const costSavingElement = document.querySelector("#weekly-cost-saving");
+  costSavingElement.textContent = Math.abs(savedFuelCost) < .5
+    ? `경유 ${DIESEL_PRICE_KRW_PER_LITER.toLocaleString("ko-KR")}원/L · 차이 없음`
+    : savedFuelCost > 0
+      ? `약 ${won(savedFuelCost)}원 절약`
+      : `약 ${won(savedFuelCost)}원 증가`;
+  costSavingElement.classList.toggle("increase", savedFuelCost < -.5);
+  document.querySelector("#weekly-chart").dataset.weeklyReduction = weeklyReduction.toFixed(1);
   document.querySelector("#weekly-next-route").innerHTML = completed >= 7
     ? '요일별 기록 수정하기 <span>↻</span>'
     : '다른 요일 경로 찾기 <span>→</span>';

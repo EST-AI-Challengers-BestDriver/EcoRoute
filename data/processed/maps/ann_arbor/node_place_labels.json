@@ -1,0 +1,2723 @@
+{
+  "generated_at_utc": "2026-08-18T14:50:49.798261+00:00",
+  "source": "OpenStreetMap contributors via OSM API",
+  "bounds": {
+    "south": 42.220321,
+    "west": -83.804639,
+    "north": 42.3257188889,
+    "east": -83.673954
+  },
+  "max_place_distance_m": 300.0,
+  "max_address_distance_m": 140.0,
+  "downloaded_element_count": 13649,
+  "named_place_count": 3639,
+  "address_count": 9704,
+  "selectable_node_count": 362,
+  "labeled_node_count": 357,
+  "nodes": {
+    "62532545": {
+      "label": "Near Arlington Boulevard & Devonshire Road",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Arlington Boulevard & Devonshire Road"
+    },
+    "62498526": {
+      "label": "Marathon",
+      "kind": "place",
+      "distance_m": 71.9,
+      "road": "Dexter Avenue & West Huron Street",
+      "osm_type": "node",
+      "osm_id": "6348570749"
+    },
+    "62537929": {
+      "label": "Ann Arbor Urgent Care",
+      "kind": "amenity",
+      "distance_m": 73.7,
+      "road": "East Stadium Boulevard & South Industrial Highway",
+      "osm_type": "node",
+      "osm_id": "9414451076"
+    },
+    "11211460099": {
+      "label": "Grewal Park Northwest Entry Monument",
+      "kind": "historic",
+      "distance_m": 28.7,
+      "road": "",
+      "osm_type": "node",
+      "osm_id": "13049244480"
+    },
+    "11306543035": {
+      "label": "Strickland's Market",
+      "kind": "shop",
+      "distance_m": 31.2,
+      "road": "Observatory Street & Geddes Avenue",
+      "osm_type": "way",
+      "osm_id": "256668070"
+    },
+    "11332562158": {
+      "label": "The Bouma Group",
+      "kind": "office",
+      "distance_m": 17.4,
+      "road": "South Main Street & East Madison Street",
+      "osm_type": "node",
+      "osm_id": "4854332757"
+    },
+    "11745060663": {
+      "label": "N- Pauline at Maple",
+      "kind": "public_transport",
+      "distance_m": 166.0,
+      "road": "",
+      "osm_type": "node",
+      "osm_id": "3129806831"
+    },
+    "11987901733": {
+      "label": "Lorandos Joshi Trial Lawyers",
+      "kind": "office",
+      "distance_m": 194.3,
+      "road": "Greenway Trail & Veridian Circle",
+      "osm_type": "way",
+      "osm_id": "387440595"
+    },
+    "342969885": {
+      "label": "Edward Johnes",
+      "kind": "office",
+      "distance_m": 18.9,
+      "road": "West Ann Street & North Ashley Street",
+      "osm_type": "node",
+      "osm_id": "4936280364"
+    },
+    "394353360": {
+      "label": "Ellsworth + Stone School (towards BTC)",
+      "kind": "public_transport",
+      "distance_m": 59.4,
+      "road": "East Ellsworth Road & Stone School Road",
+      "osm_type": "node",
+      "osm_id": "9566963521"
+    },
+    "394353688": {
+      "label": "Platt + Ellsworth (towards YTC)",
+      "kind": "public_transport",
+      "distance_m": 44.7,
+      "road": "East Ellsworth Road & Platt Road",
+      "osm_type": "node",
+      "osm_id": "9566963517"
+    },
+    "4140338128": {
+      "label": "Near Avon Road & Vinewood Boulevard",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Avon Road & Vinewood Boulevard"
+    },
+    "5014399523": {
+      "label": "Foxfire East Park",
+      "kind": "leisure",
+      "distance_m": 266.0,
+      "road": "Dhu Varren Road & North Spurway Drive",
+      "osm_type": "way",
+      "osm_id": "394510222"
+    },
+    "5624574722": {
+      "label": "Depot Plaza",
+      "kind": "leisure",
+      "distance_m": 43.8,
+      "road": "North Main Street & West Summit Street",
+      "osm_type": "way",
+      "osm_id": "459270428"
+    },
+    "62477148": {
+      "label": "Huntington Bank",
+      "kind": "amenity",
+      "distance_m": 65.6,
+      "road": "Plymouth Road & Nixon Road",
+      "osm_type": "way",
+      "osm_id": "303358563"
+    },
+    "62484604": {
+      "label": "Carpenter Elementary School",
+      "kind": "amenity",
+      "distance_m": 115.4,
+      "road": "Dayton Drive & Central Boulevard",
+      "osm_type": "way",
+      "osm_id": "306183020"
+    },
+    "62484861": {
+      "label": "Scio Church + Welch",
+      "kind": "public_transport",
+      "distance_m": 181.3,
+      "road": "Mershon Drive & Hanover Court",
+      "osm_type": "node",
+      "osm_id": "5800073634"
+    },
+    "62484877": {
+      "label": "Lawton Park",
+      "kind": "leisure",
+      "distance_m": 168.2,
+      "road": "Mershon Drive & Delaware Drive",
+      "osm_type": "way",
+      "osm_id": "393917971"
+    },
+    "62485899": {
+      "label": "Mary Beth Doyle Park Disc Golf Course",
+      "kind": "leisure",
+      "distance_m": 169.6,
+      "road": "Chelsea Circle & Birch Hollow Drive",
+      "osm_type": "node",
+      "osm_id": "3067347902"
+    },
+    "62486004": {
+      "label": "Foxfire West Nature Area",
+      "kind": "leisure",
+      "distance_m": 234.9,
+      "road": "Hickory Point Drive & Birchwood Court",
+      "osm_type": "way",
+      "osm_id": "394510226"
+    },
+    "62486082": {
+      "label": "Liberty + Third",
+      "kind": "public_transport",
+      "distance_m": 13.1,
+      "road": "West Liberty Street & Third Street",
+      "osm_type": "node",
+      "osm_id": "4835371990"
+    },
+    "62486090": {
+      "label": "John Hagen House",
+      "kind": "building",
+      "distance_m": 42.9,
+      "road": "West Liberty Street & South Seventh Street",
+      "osm_type": "way",
+      "osm_id": "503275545"
+    },
+    "62486120": {
+      "label": "Victory Lane",
+      "kind": "shop",
+      "distance_m": 42.9,
+      "road": "West Liberty Street & West Stadium Boulevard",
+      "osm_type": "way",
+      "osm_id": "441287584"
+    },
+    "62486342": {
+      "label": "Transformer 1",
+      "kind": "building",
+      "distance_m": 129.2,
+      "road": "Medford Road & Manchester Road",
+      "osm_type": "way",
+      "osm_id": "575608393"
+    },
+    "62486503": {
+      "label": "Lowertown Bluffs",
+      "kind": "building",
+      "distance_m": 78.1,
+      "road": "Wright Street & Long Shore Drive",
+      "osm_type": "way",
+      "osm_id": "1089949589"
+    },
+    "62486734": {
+      "label": "Korean United Methodist Church of Ann Arbor",
+      "kind": "building",
+      "distance_m": 123.7,
+      "road": "Fulmer Street & Garden Homes Drive",
+      "osm_type": "way",
+      "osm_id": "547254325"
+    },
+    "62486859": {
+      "label": "Yost Ice Arena",
+      "kind": "leisure",
+      "distance_m": 144.9,
+      "road": "McKinley Avenue & White Street",
+      "osm_type": "way",
+      "osm_id": "128634894"
+    },
+    "62486941": {
+      "label": "Rudolf Steiner Health Center",
+      "kind": "amenity",
+      "distance_m": 136.0,
+      "road": "Bemidji Drive & Ventura Court",
+      "osm_type": "node",
+      "osm_id": "12926809188"
+    },
+    "62487324": {
+      "label": "E - Seventh north of Pauline",
+      "kind": "public_transport",
+      "distance_m": 99.8,
+      "road": "Pauline Boulevard & Hutchins Avenue",
+      "osm_type": "node",
+      "osm_id": "4801812216"
+    },
+    "62487350": {
+      "label": "Community Supported Anthroposophical Medicine",
+      "kind": "amenity",
+      "distance_m": 43.9,
+      "road": "Pauline Boulevard & West Stadium Boulevard",
+      "osm_type": "way",
+      "osm_id": "444754817"
+    },
+    "62487935": {
+      "label": "Molin Nature Area",
+      "kind": "leisure",
+      "distance_m": 139.9,
+      "road": "Columbia Avenue & Kimberley Road",
+      "osm_type": "way",
+      "osm_id": "458841954"
+    },
+    "62488341": {
+      "label": "N- Oak Valley W of Lohr",
+      "kind": "public_transport",
+      "distance_m": 43.4,
+      "road": "Oak Valley Drive & Lohr Road",
+      "osm_type": "node",
+      "osm_id": "4763445658"
+    },
+    "62488691": {
+      "label": "AAA Ann Arbor",
+      "kind": "office",
+      "distance_m": 183.7,
+      "road": "Potter Avenue & Belmar Place",
+      "osm_type": "way",
+      "osm_id": "457365211"
+    },
+    "62488961": {
+      "label": "Dr. Steven Lutz",
+      "kind": "healthcare",
+      "distance_m": 101.6,
+      "road": "Crestland Drive & Ferdon Road",
+      "osm_type": "way",
+      "osm_id": "329600405"
+    },
+    "62490002": {
+      "label": "Windemere Park",
+      "kind": "leisure",
+      "distance_m": 239.5,
+      "road": "Fairmount Drive & Wynnstone Drive",
+      "osm_type": "way",
+      "osm_id": "225432211"
+    },
+    "62490416": {
+      "label": "First United Methodist Church, Green Wood",
+      "kind": "amenity",
+      "distance_m": 262.5,
+      "road": "Charter Place & Bardstown Trail",
+      "osm_type": "way",
+      "osm_id": "480953346"
+    },
+    "62490500": {
+      "label": "Calvary United Methodist",
+      "kind": "amenity",
+      "distance_m": 51.0,
+      "road": "Miller Avenue & Newport Road",
+      "osm_type": "way",
+      "osm_id": "836250778"
+    },
+    "62490555": {
+      "label": "Northside Park",
+      "kind": "leisure",
+      "distance_m": 272.1,
+      "road": "Amherst Avenue & Chandler Avenue",
+      "osm_type": "way",
+      "osm_id": "459096071"
+    },
+    "62490994": {
+      "label": "Near Orange Blossom Lane & Apple Avenue",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Orange Blossom Lane & Apple Avenue"
+    },
+    "62491077": {
+      "label": "AAATA 504",
+      "kind": "public_transport",
+      "distance_m": 123.4,
+      "road": "East Eisenhower Parkway & Boardwalk Drive",
+      "osm_type": "node",
+      "osm_id": "3509089952"
+    },
+    "62491254": {
+      "label": "Gretchen's House",
+      "kind": "amenity",
+      "distance_m": 201.3,
+      "road": "Lutz Avenue & Soule Boulevard",
+      "osm_type": "way",
+      "osm_id": "504776227"
+    },
+    "62491620": {
+      "label": "Fritz School",
+      "kind": "amenity",
+      "distance_m": 172.6,
+      "road": "Walter Drive & Carbeck Drive",
+      "osm_type": "node",
+      "osm_id": "353932769"
+    },
+    "62492590": {
+      "label": "Seventh + Scio Church",
+      "kind": "public_transport",
+      "distance_m": 235.6,
+      "road": "Chaucer Drive & Scio Church Road",
+      "osm_type": "node",
+      "osm_id": "4955838644"
+    },
+    "62493639": {
+      "label": "Church of the Good Shepard",
+      "kind": "amenity",
+      "distance_m": 149.7,
+      "road": "Manchester Road & Independence Boulevard",
+      "osm_type": "way",
+      "osm_id": "461638587"
+    },
+    "62494394": {
+      "label": "Wellington Park",
+      "kind": "leisure",
+      "distance_m": 118.8,
+      "road": "Grace Street & Westwood Avenue",
+      "osm_type": "way",
+      "osm_id": "394236861"
+    },
+    "62496085": {
+      "label": "Newport + Bird",
+      "kind": "public_transport",
+      "distance_m": 10.6,
+      "road": "Newport Road & Bird Road",
+      "osm_type": "node",
+      "osm_id": "4833725746"
+    },
+    "62497542": {
+      "label": "Maintenance Shed",
+      "kind": "building",
+      "distance_m": 188.7,
+      "road": "South Green Road & Watershed Drive",
+      "osm_type": "way",
+      "osm_id": "1258340700"
+    },
+    "62498295": {
+      "label": "Pauline + Meadowbrook",
+      "kind": "public_transport",
+      "distance_m": 242.2,
+      "road": "Martha Avenue & Ardmoor Avenue",
+      "osm_type": "node",
+      "osm_id": "4921098466"
+    },
+    "62498378": {
+      "label": "Near Appleridge Drive & Tiger Lily Ridge",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Appleridge Drive & Tiger Lily Ridge"
+    },
+    "62498406": {
+      "label": "3538 Bella Vista Drive",
+      "kind": "address",
+      "distance_m": 59.5,
+      "road": "Ann Arbor-Saline Road & Tiger Lily Ridge"
+    },
+    "62499314": {
+      "label": "Arbor Hills Nature Area",
+      "kind": "leisure",
+      "distance_m": 185.3,
+      "road": "Green Road & Gettysburg Road",
+      "osm_type": "way",
+      "osm_id": "394889905"
+    },
+    "62500372": {
+      "label": "Calvary Chapel",
+      "kind": "amenity",
+      "distance_m": 216.0,
+      "road": "Redwood Avenue & McComb Street",
+      "osm_type": "way",
+      "osm_id": "551177249"
+    },
+    "62500377": {
+      "label": "Platt & Redwood (towards Ann Arbor)",
+      "kind": "public_transport",
+      "distance_m": 21.1,
+      "road": "Redwood Avenue & Platt Road",
+      "osm_type": "node",
+      "osm_id": "5246288813"
+    },
+    "62500597": {
+      "label": "Hubbs + Black",
+      "kind": "office",
+      "distance_m": 40.1,
+      "road": "East Huron Street & South State Street",
+      "osm_type": "way",
+      "osm_id": "454516418"
+    },
+    "62500610": {
+      "label": "Law School",
+      "kind": "public_transport",
+      "distance_m": 22.0,
+      "road": "South State Street & Monroe Street",
+      "osm_type": "node",
+      "osm_id": "4933284063"
+    },
+    "62501077": {
+      "label": "The Garage Bar",
+      "kind": "amenity",
+      "distance_m": 40.6,
+      "road": "Church Street & Willard Street",
+      "osm_type": "node",
+      "osm_id": "11061643005"
+    },
+    "62501083": {
+      "label": "Fritz Lofts",
+      "kind": "building",
+      "distance_m": 59.9,
+      "road": "Church Street & Judson Court",
+      "osm_type": "way",
+      "osm_id": "468944456"
+    },
+    "62501419": {
+      "label": "William & Main Street Lot",
+      "kind": "amenity",
+      "distance_m": 36.6,
+      "road": "South Main Street & West William Street",
+      "osm_type": "way",
+      "osm_id": "299321975"
+    },
+    "62502421": {
+      "label": "Near South Maple Road & West Ellsworth Road",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "South Maple Road & West Ellsworth Road"
+    },
+    "62502470": {
+      "label": "Midas",
+      "kind": "shop",
+      "distance_m": 60.2,
+      "road": "Jackson Avenue & North Maple Road",
+      "osm_type": "way",
+      "osm_id": "441445538"
+    },
+    "62502586": {
+      "label": "Allen Elementary School",
+      "kind": "amenity",
+      "distance_m": 178.0,
+      "road": "Towner Boulevard & Easy Street",
+      "osm_type": "way",
+      "osm_id": "306768193"
+    },
+    "62502810": {
+      "label": "Ursa Academy BJJ",
+      "kind": "amenity",
+      "distance_m": 106.3,
+      "road": "East Ellsworth Road & Varsity Drive",
+      "osm_type": "node",
+      "osm_id": "8923358788"
+    },
+    "62502883": {
+      "label": "Meijer",
+      "kind": "shop",
+      "distance_m": 80.4,
+      "road": "East Ellsworth Road & Carpenter Road",
+      "osm_type": "node",
+      "osm_id": "2758425281"
+    },
+    "62503294": {
+      "label": "W- Oakbrook S of Rolling Meadows",
+      "kind": "public_transport",
+      "distance_m": 241.7,
+      "road": "Ann Arbor-Saline Road & West Oakbrook Drive",
+      "osm_type": "node",
+      "osm_id": "4763445648"
+    },
+    "62503312": {
+      "label": "Texas Roadhouse",
+      "kind": "amenity",
+      "distance_m": 62.1,
+      "road": "Ann Arbor-Saline Road & West Waters Road",
+      "osm_type": "way",
+      "osm_id": "549989961"
+    },
+    "62503323": {
+      "label": "First Unitarian Universalist Congregation of Ann Arbor",
+      "kind": "amenity",
+      "distance_m": 135.9,
+      "road": "Ann Arbor-Saline Road & West Ellsworth Road",
+      "osm_type": "way",
+      "osm_id": "115569150"
+    },
+    "62506421": {
+      "label": "Little Free Library",
+      "kind": "amenity",
+      "distance_m": 163.0,
+      "road": "Concord Road & Lafayette Road",
+      "osm_type": "node",
+      "osm_id": "13997933205"
+    },
+    "62506430": {
+      "label": "Ann Arbor Senior Center",
+      "kind": "amenity",
+      "distance_m": 183.7,
+      "road": "Ferdon Road & Hermitage Road",
+      "osm_type": "way",
+      "osm_id": "458841912"
+    },
+    "62506692": {
+      "label": "Near Robinwood Drive & Cottontail Lane",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Robinwood Drive & Cottontail Lane"
+    },
+    "62507823": {
+      "label": "Piedmont Substation",
+      "kind": "place",
+      "distance_m": 125.5,
+      "road": "West Waters Road & South Wagner Road",
+      "osm_type": "way",
+      "osm_id": "471836819"
+    },
+    "62508904": {
+      "label": "Near Santa Fe Trail & Rodeo Drive",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Santa Fe Trail & Rodeo Drive"
+    },
+    "62509290": {
+      "label": "Tuebingen Parkway",
+      "kind": "leisure",
+      "distance_m": 150.9,
+      "road": "Tuebingen Parkway & Lancashire Drive",
+      "osm_type": "way",
+      "osm_id": "394745587"
+    },
+    "62511035": {
+      "label": "UMICH E611",
+      "kind": "public_transport",
+      "distance_m": 262.9,
+      "road": "Earhart Road & Ford Road",
+      "osm_type": "node",
+      "osm_id": "10863827085"
+    },
+    "62511178": {
+      "label": "Allmendinger Park",
+      "kind": "leisure",
+      "distance_m": 23.0,
+      "road": "Birk Avenue & Snyder Avenue",
+      "osm_type": "way",
+      "osm_id": "460247755"
+    },
+    "62513953": {
+      "label": "Glacier Highlands Park",
+      "kind": "leisure",
+      "distance_m": 161.5,
+      "road": "Larchmont Drive & Bardstown Trail",
+      "osm_type": "way",
+      "osm_id": "283124193"
+    },
+    "62514388": {
+      "label": "Flame of Wisdom",
+      "kind": "tourism",
+      "distance_m": 26.4,
+      "road": "East Ann Street & Glen Avenue",
+      "osm_type": "node",
+      "osm_id": "5633650198"
+    },
+    "62515137": {
+      "label": "Lot NC43",
+      "kind": "amenity",
+      "distance_m": 204.1,
+      "road": "Fuller Road & Fuller Court",
+      "osm_type": "way",
+      "osm_id": "82246918"
+    },
+    "62515179": {
+      "label": "Club House",
+      "kind": "amenity",
+      "distance_m": 52.7,
+      "road": "Nixon Road & Barclay Way",
+      "osm_type": "way",
+      "osm_id": "990247480"
+    },
+    "62516716": {
+      "label": "Bryant Community Center",
+      "kind": "amenity",
+      "distance_m": 124.3,
+      "road": "Champagne Drive & Kilbrennan Court",
+      "osm_type": "way",
+      "osm_id": "551288654"
+    },
+    "62517042": {
+      "label": "Tappan Middle School",
+      "kind": "amenity",
+      "distance_m": 268.1,
+      "road": "Copley Avenue & Brockman Boulevard",
+      "osm_type": "way",
+      "osm_id": "306766738"
+    },
+    "62517097": {
+      "label": "Arhaus",
+      "kind": "shop",
+      "distance_m": 48.3,
+      "road": "Washtenaw Avenue & Glenwood Road",
+      "osm_type": "way",
+      "osm_id": "345330844"
+    },
+    "62517983": {
+      "label": "Rochman Design Build",
+      "kind": "office",
+      "distance_m": 194.7,
+      "road": "Rosewood Street & Page Avenue",
+      "osm_type": "way",
+      "osm_id": "329600401"
+    },
+    "62518153": {
+      "label": "Heavenly Metal",
+      "kind": "building",
+      "distance_m": 120.4,
+      "road": "Maplewood Avenue & Oakwood Street",
+      "osm_type": "way",
+      "osm_id": "559344437"
+    },
+    "62518176": {
+      "label": "bbc Entrepreneurial Training & Consulting",
+      "kind": "office",
+      "distance_m": 159.4,
+      "road": "Pleasant Place & Abbott Avenue",
+      "osm_type": "node",
+      "osm_id": "4438319188"
+    },
+    "62521176": {
+      "label": "Near East Huron River Drive & East Huron River Service Drive",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "East Huron River Drive & East Huron River Service Drive"
+    },
+    "62521189": {
+      "label": "Near Barry Knoll Drive & Knollwood Circle",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Barry Knoll Drive & Knollwood Circle"
+    },
+    "62521502": {
+      "label": "Sigma Phi",
+      "kind": "building",
+      "distance_m": 84.8,
+      "road": "Cambridge Road & Lincoln Avenue",
+      "osm_type": "way",
+      "osm_id": "591094565"
+    },
+    "62524161": {
+      "label": "Amoco",
+      "kind": "shop",
+      "distance_m": 50.7,
+      "road": "Washtenaw Avenue & Carpenter Road",
+      "osm_type": "way",
+      "osm_id": "909207927"
+    },
+    "62524169": {
+      "label": "Speedway",
+      "kind": "amenity",
+      "distance_m": 52.0,
+      "road": "Carpenter Road & Packard Road",
+      "osm_type": "node",
+      "osm_id": "2040305597"
+    },
+    "62526073": {
+      "label": "Pontiac Regulator Station",
+      "kind": "place",
+      "distance_m": 158.4,
+      "road": "Pontiac Trail & Brookside Drive",
+      "osm_type": "way",
+      "osm_id": "1051955753"
+    },
+    "62526096": {
+      "label": "Onder Park",
+      "kind": "leisure",
+      "distance_m": 174.8,
+      "road": "Hilldale Drive & Brookside Drive",
+      "osm_type": "way",
+      "osm_id": "27785567"
+    },
+    "62526660": {
+      "label": "Near Barrington Place & Weldon Boulevard",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Barrington Place & Weldon Boulevard"
+    },
+    "62526779": {
+      "label": "AAATA 651",
+      "kind": "public_transport",
+      "distance_m": 33.9,
+      "road": "East Eisenhower Parkway & Hayes Court",
+      "osm_type": "node",
+      "osm_id": "3509089942"
+    },
+    "62527491": {
+      "label": "The Mallory House",
+      "kind": "building",
+      "distance_m": 26.6,
+      "road": "West Huron Street & North Seventh Street",
+      "osm_type": "way",
+      "osm_id": "371837042"
+    },
+    "62527651": {
+      "label": "Near Argonne Drive & South Trinkle Road",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Argonne Drive & South Trinkle Road"
+    },
+    "62527714": {
+      "label": "Near Archwood Drive & Hollywood Drive",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Archwood Drive & Hollywood Drive"
+    },
+    "62528055": {
+      "label": "Trinity Health - Domino's Farms",
+      "kind": "place",
+      "distance_m": 165.7,
+      "road": "Earhart Road & Whitehall Drive",
+      "osm_type": "way",
+      "osm_id": "405113207"
+    },
+    "62529614": {
+      "label": "Near West Ellsworth Road & Lake Forest Drive West",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "West Ellsworth Road & Lake Forest Drive West"
+    },
+    "62529974": {
+      "label": "Earhart Park",
+      "kind": "leisure",
+      "distance_m": 227.5,
+      "road": "Wellington Cross Road",
+      "osm_type": "way",
+      "osm_id": "283124190"
+    },
+    "62530321": {
+      "label": "Pittsfield Elementary School",
+      "kind": "amenity",
+      "distance_m": 81.7,
+      "road": "Oakwood Street & Pittsfield Boulevard",
+      "osm_type": "way",
+      "osm_id": "306768633"
+    },
+    "62531127": {
+      "label": "Botsford Preserve",
+      "kind": "leisure",
+      "distance_m": 254.0,
+      "road": "North Wagner Road & Wagner Ridge Court",
+      "osm_type": "way",
+      "osm_id": "818882056"
+    },
+    "62531156": {
+      "label": "Evergreen Park",
+      "kind": "leisure",
+      "distance_m": 115.4,
+      "road": "Kingwood Street & Barber Avenue",
+      "osm_type": "way",
+      "osm_id": "394236850"
+    },
+    "62531365": {
+      "label": "Warrington + Lincolnshire",
+      "kind": "public_transport",
+      "distance_m": 222.4,
+      "road": "Warrington Drive & Salisbury Lane",
+      "osm_type": "node",
+      "osm_id": "4833725747"
+    },
+    "62531453": {
+      "label": "Near Belmont Road & Melrose Road",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Belmont Road & Melrose Road"
+    },
+    "62531773": {
+      "label": "Packard + Fernwood (towards Ann Arbor)",
+      "kind": "public_transport",
+      "distance_m": 25.7,
+      "road": "Fernwood Avenue & Packard Road",
+      "osm_type": "node",
+      "osm_id": "3509089938"
+    },
+    "62532617": {
+      "label": "2785 Heather Way",
+      "kind": "address",
+      "distance_m": 120.3,
+      "road": "Heather Way & Arlington Boulevard"
+    },
+    "62532827": {
+      "label": "John E. Green",
+      "kind": "building",
+      "distance_m": 59.5,
+      "road": "Tremmel Avenue & Marlborough Drive",
+      "osm_type": "way",
+      "osm_id": "330060764"
+    },
+    "62533414": {
+      "label": "Clinton Park (towards YTC)",
+      "kind": "public_transport",
+      "distance_m": 20.8,
+      "road": "Birch Hollow Drive & Stone School Road",
+      "osm_type": "node",
+      "osm_id": "3894222075"
+    },
+    "62535181": {
+      "label": "Northside Community Church",
+      "kind": "amenity",
+      "distance_m": 95.2,
+      "road": "Barton Drive & Traver Road",
+      "osm_type": "way",
+      "osm_id": "637893250"
+    },
+    "62535395": {
+      "label": "Near Blueberry Lane & North Maple Road",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Blueberry Lane & North Maple Road"
+    },
+    "62536462": {
+      "label": "Near Wolverhampton Lane & East Dobson Place",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Wolverhampton Lane & East Dobson Place"
+    },
+    "62536797": {
+      "label": "Rawaq Cafe",
+      "kind": "amenity",
+      "distance_m": 149.8,
+      "road": "Mason Avenue & Lakeview Drive",
+      "osm_type": "way",
+      "osm_id": "460460311"
+    },
+    "62538581": {
+      "label": "Upland + Scio Ridge",
+      "kind": "public_transport",
+      "distance_m": 106.6,
+      "road": "Snowberry Ridge Road & Hedgenettle Court",
+      "osm_type": "node",
+      "osm_id": "5800073630"
+    },
+    "62539277": {
+      "label": "Saint Francis of Assisi Catholic Church",
+      "kind": "amenity",
+      "distance_m": 171.0,
+      "road": "Frieze Avenue & Brockman Boulevard",
+      "osm_type": "way",
+      "osm_id": "337200618"
+    },
+    "62539442": {
+      "label": "Beth Israel Congregation",
+      "kind": "amenity",
+      "distance_m": 69.9,
+      "road": "Washtenaw Avenue & Devonshire Road",
+      "osm_type": "way",
+      "osm_id": "492847459"
+    },
+    "62540699": {
+      "label": "Fellowship Bible Church of Ann Arbor",
+      "kind": "amenity",
+      "distance_m": 197.3,
+      "road": "Overridge Drive & Arlington Boulevard",
+      "osm_type": "way",
+      "osm_id": "306842352"
+    },
+    "62541013": {
+      "label": "Cross House",
+      "kind": "building",
+      "distance_m": 59.7,
+      "road": "Hubbard Road & Baits Drive",
+      "osm_type": "way",
+      "osm_id": "256664460"
+    },
+    "62541460": {
+      "label": "Near Mystic Drive & Cook Creek Drive",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Mystic Drive & Cook Creek Drive"
+    },
+    "62541784": {
+      "label": "Buttonbush Nature Area",
+      "kind": "leisure",
+      "distance_m": 296.2,
+      "road": "Hickory Point Drive & Foxway Court",
+      "osm_type": "way",
+      "osm_id": "736219030"
+    },
+    "62544183": {
+      "label": "AAATA 649",
+      "kind": "public_transport",
+      "distance_m": 29.5,
+      "road": "East Eisenhower Parkway & Stone School Road",
+      "osm_type": "node",
+      "osm_id": "3509089950"
+    },
+    "62545980": {
+      "label": "Dollar Tree",
+      "kind": "shop",
+      "distance_m": 91.6,
+      "road": "Yost Boulevard & Darrow Drive",
+      "osm_type": "way",
+      "osm_id": "192972976"
+    },
+    "62547001": {
+      "label": "Daycroft Montessori School",
+      "kind": "amenity",
+      "distance_m": 119.4,
+      "road": "Oakbrook Drive & Briarcrest Drive",
+      "osm_type": "way",
+      "osm_id": "540443082"
+    },
+    "62548124": {
+      "label": "Dhu Varren + Omlesaad",
+      "kind": "public_transport",
+      "distance_m": 28.9,
+      "road": "Omlesaad Drive & Dhu Varren Road",
+      "osm_type": "node",
+      "osm_id": "9878273939"
+    },
+    "62548329": {
+      "label": "N - Madison west of Fourth",
+      "kind": "public_transport",
+      "distance_m": 82.3,
+      "road": "West Madison Street & Fifth Street",
+      "osm_type": "node",
+      "osm_id": "3908834962"
+    },
+    "62548439": {
+      "label": "Ann Arbor Railroad",
+      "kind": "railway",
+      "distance_m": 258.3,
+      "road": "Fountain Street & Felch Street",
+      "osm_type": "way",
+      "osm_id": "10458231"
+    },
+    "62549687": {
+      "label": "Bank of Ann Arbor",
+      "kind": "amenity",
+      "distance_m": 93.2,
+      "road": "Airport Boulevard & West Ellsworth Road",
+      "osm_type": "way",
+      "osm_id": "400044609"
+    },
+    "62549881": {
+      "label": "Mixtwood Pomona Park",
+      "kind": "leisure",
+      "distance_m": 161.3,
+      "road": "Red Oak Road & Mixtwood Street",
+      "osm_type": "way",
+      "osm_id": "394236858"
+    },
+    "62549905": {
+      "label": "Near Red Oak Road & Pomona Road",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Red Oak Road & Pomona Road"
+    },
+    "62550439": {
+      "label": "Martin Luther King Jr. Elementary School",
+      "kind": "amenity",
+      "distance_m": 189.6,
+      "road": "Waldenwood Drive & Penberton Drive",
+      "osm_type": "way",
+      "osm_id": "306855875"
+    },
+    "62551243": {
+      "label": "Dicken Elementary PLANT Garden",
+      "kind": "leisure",
+      "distance_m": 81.0,
+      "road": "Carol Drive & Stephen Terrace",
+      "osm_type": "way",
+      "osm_id": "651747617"
+    },
+    "62551849": {
+      "label": "M93",
+      "kind": "amenity",
+      "distance_m": 87.0,
+      "road": "Maiden Lane & Nielsen Court",
+      "osm_type": "way",
+      "osm_id": "405678290"
+    },
+    "62555220": {
+      "label": "UM Lot W34",
+      "kind": "amenity",
+      "distance_m": 117.0,
+      "road": "Brown Street & East Davis Avenue",
+      "osm_type": "way",
+      "osm_id": "1452144501"
+    },
+    "62557270": {
+      "label": "Scarlett and Mitchell Schools",
+      "kind": "amenity",
+      "distance_m": 223.5,
+      "road": "Lorraine Street & Pittsview Drive",
+      "osm_type": "way",
+      "osm_id": "306842342"
+    },
+    "62558955": {
+      "label": "Liberty Dental",
+      "kind": "amenity",
+      "distance_m": 58.5,
+      "road": "West Liberty Road & South Wagner Road",
+      "osm_type": "way",
+      "osm_id": "1160263212"
+    },
+    "62565327": {
+      "label": "Packard + Granger (towards BTC)",
+      "kind": "public_transport",
+      "distance_m": 26.6,
+      "road": "Granger Avenue & Packard Street",
+      "osm_type": "node",
+      "osm_id": "4936949825"
+    },
+    "62565344": {
+      "label": "Varsity Ford",
+      "kind": "shop",
+      "distance_m": 173.4,
+      "road": "Ferry Street & Westover Avenue",
+      "osm_type": "way",
+      "osm_id": "220543486"
+    },
+    "62565682": {
+      "label": "Shell",
+      "kind": "amenity",
+      "distance_m": 46.9,
+      "road": "Washtenaw Avenue & South Huron Parkway",
+      "osm_type": "node",
+      "osm_id": "8441975856"
+    },
+    "62566451": {
+      "label": "Saint Luke-Ann Arbor",
+      "kind": "amenity",
+      "distance_m": 247.4,
+      "road": "Washtenaw Avenue & Dalton Drive",
+      "osm_type": "way",
+      "osm_id": "562021642"
+    },
+    "62569654": {
+      "label": "3122 Alisa Craig Court",
+      "kind": "address",
+      "distance_m": 31.1,
+      "road": "Alisa Craig Court & Turnberry Lane"
+    },
+    "62570071": {
+      "label": "Near West Ellsworth Road & Lohr Road",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "West Ellsworth Road & Lohr Road"
+    },
+    "62570479": {
+      "label": "Gretchen's House",
+      "kind": "amenity",
+      "distance_m": 187.0,
+      "road": "Dhu Varren Road & Pontiac Trail",
+      "osm_type": "way",
+      "osm_id": "469799814"
+    },
+    "62574041": {
+      "label": "Glass House",
+      "kind": "building",
+      "distance_m": 116.0,
+      "road": "Earhart Road & Goss Road",
+      "osm_type": "way",
+      "osm_id": "1271304382"
+    },
+    "62578821": {
+      "label": "Delta Chi",
+      "kind": "building",
+      "distance_m": 37.9,
+      "road": "Hill Street & Oxford Road",
+      "osm_type": "way",
+      "osm_id": "503053820"
+    },
+    "62583429": {
+      "label": "Northwood III Inbound",
+      "kind": "public_transport",
+      "distance_m": 82.8,
+      "road": "Murfin Avenue & Hubbard Road",
+      "osm_type": "node",
+      "osm_id": "10906823488"
+    },
+    "62590471": {
+      "label": "Near Rose Drive & Stowe Street",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Rose Drive & Stowe Street"
+    },
+    "62590640": {
+      "label": "#31",
+      "kind": "public_transport",
+      "distance_m": 85.6,
+      "road": "North Wagner Road & Dexter Ann Arbor Road",
+      "osm_type": "node",
+      "osm_id": "5885975371"
+    },
+    "62595431": {
+      "label": "Esch Park",
+      "kind": "tourism",
+      "distance_m": 219.8,
+      "road": "Pine Valley Boulevard & Page Avenue",
+      "osm_type": "node",
+      "osm_id": "10124670523"
+    },
+    "62595560": {
+      "label": "SafeHouse Center",
+      "kind": "amenity",
+      "distance_m": 239.4,
+      "road": "Glencoe Hills Drive",
+      "osm_type": "way",
+      "osm_id": "562026193"
+    },
+    "62601278": {
+      "label": "William + Thompson",
+      "kind": "public_transport",
+      "distance_m": 17.9,
+      "road": "East William Street & Thompson Street",
+      "osm_type": "node",
+      "osm_id": "4958401110"
+    },
+    "62601733": {
+      "label": "Circle K",
+      "kind": "amenity",
+      "distance_m": 36.9,
+      "road": "East Stadium Boulevard & Packard Street",
+      "osm_type": "node",
+      "osm_id": "8441975824"
+    },
+    "62606176": {
+      "label": "Chase",
+      "kind": "amenity",
+      "distance_m": 73.3,
+      "road": "Plymouth Road & Green Road",
+      "osm_type": "way",
+      "osm_id": "298913028"
+    },
+    "62610678": {
+      "label": "Near Walnut Ridge Drive & Autumn Hill Drive",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Walnut Ridge Drive & Autumn Hill Drive"
+    },
+    "62613626": {
+      "label": "Earhart Corporate Center",
+      "kind": "building",
+      "distance_m": 256.9,
+      "road": "Plymouth Road & Old Earhart Road",
+      "osm_type": "way",
+      "osm_id": "313503658"
+    },
+    "8360847463": {
+      "label": "The One",
+      "kind": "office",
+      "distance_m": 162.9,
+      "road": "St. Regis Way & Paradise Way",
+      "osm_type": "way",
+      "osm_id": "1167877324"
+    },
+    "9770516628": {
+      "label": "W - Ann Arbor - Saline south of Brookfield",
+      "kind": "public_transport",
+      "distance_m": 26.2,
+      "road": "Ann Arbor-Saline Road & Brookfield Drive",
+      "osm_type": "node",
+      "osm_id": "4763445653"
+    },
+    "10940746875": {
+      "label": "Canoe Tulip",
+      "kind": "tourism",
+      "distance_m": 143.5,
+      "road": "Barton Drive & Barton Shore Drive",
+      "osm_type": "node",
+      "osm_id": "6370959840"
+    },
+    "62484936": {
+      "label": "Zingerman's Deli",
+      "kind": "amenity",
+      "distance_m": 13.2,
+      "road": "East Kingsley Street & Detroit Street",
+      "osm_type": "node",
+      "osm_id": "12552300476"
+    },
+    "62496039": {
+      "label": "Forsythe Middle School",
+      "kind": "amenity",
+      "distance_m": 221.1,
+      "road": "Newport Road & Sunset Road",
+      "osm_type": "way",
+      "osm_id": "128638305"
+    },
+    "77361188": {
+      "label": "Childtime Preschool",
+      "kind": "amenity",
+      "distance_m": 87.7,
+      "road": "Plymouth Road & Earhart Road",
+      "osm_type": "way",
+      "osm_id": "626240651"
+    },
+    "10793011225": {
+      "label": "Earhart Park",
+      "kind": "leisure",
+      "distance_m": 250.1,
+      "road": "Earhart Road & Concord Pines Drive",
+      "osm_type": "way",
+      "osm_id": "283124190"
+    },
+    "1114444548": {
+      "label": "BioLife Plasma Services",
+      "kind": "healthcare",
+      "distance_m": 190.9,
+      "road": "Center Valley Drive & Knollcrest Drive",
+      "osm_type": "way",
+      "osm_id": "192992461"
+    },
+    "1121114070": {
+      "label": "Kroger",
+      "kind": "shop",
+      "distance_m": 190.3,
+      "road": "Woodcreek Boulevard & Meadowside Drive",
+      "osm_type": "way",
+      "osm_id": "192986057"
+    },
+    "1236322647": {
+      "label": "Near Craig Road & Stone Valley Drive",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Craig Road & Stone Valley Drive"
+    },
+    "12811585768": {
+      "label": "Scio Ridge + Liberty",
+      "kind": "public_transport",
+      "distance_m": 169.0,
+      "road": "Trego Circle & Burr Oak Drive",
+      "osm_type": "node",
+      "osm_id": "5799783992"
+    },
+    "13239485125": {
+      "label": "Northwood Community Center",
+      "kind": "tourism",
+      "distance_m": 10.3,
+      "road": "McIntyre Drive",
+      "osm_type": "node",
+      "osm_id": "13963427012"
+    },
+    "1367865782": {
+      "label": "Foster Bridge",
+      "kind": "historic",
+      "distance_m": 216.3,
+      "road": "West Huron River Drive & North Maple Road",
+      "osm_type": "node",
+      "osm_id": "12230322780"
+    },
+    "13718912564": {
+      "label": "Forestbrooke Swim Club",
+      "kind": "building",
+      "distance_m": 169.6,
+      "road": "Burton Road & Eli Drive",
+      "osm_type": "way",
+      "osm_id": "407427006"
+    },
+    "13748870940": {
+      "label": "Near Maple Ridge Drive & Maple Leaf Lane",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Maple Ridge Drive & Maple Leaf Lane"
+    },
+    "13822786835": {
+      "label": "Mack School",
+      "kind": "amenity",
+      "distance_m": 152.0,
+      "road": "Miller Avenue & Red Oak Road",
+      "osm_type": "way",
+      "osm_id": "306737801"
+    },
+    "13921167116": {
+      "label": "Gardner-White Furniture & Mattress",
+      "kind": "shop",
+      "distance_m": 290.7,
+      "road": "Creek Hills Road & Pond Bluffs Road",
+      "osm_type": "way",
+      "osm_id": "342424642"
+    },
+    "13935602376": {
+      "label": "Near Whitmore Lake Road & Samara Lane",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Whitmore Lake Road & Samara Lane"
+    },
+    "1808343243": {
+      "label": "Oakwoods Nature Area",
+      "kind": "leisure",
+      "distance_m": 119.6,
+      "road": "Barclay Way",
+      "osm_type": "way",
+      "osm_id": "394889908"
+    },
+    "1808343247": {
+      "label": "Clague Middle School",
+      "kind": "amenity",
+      "distance_m": 241.7,
+      "road": "Meade Court & Traver Road",
+      "osm_type": "way",
+      "osm_id": "306739218"
+    },
+    "2035027346": {
+      "label": "AAATA 646",
+      "kind": "public_transport",
+      "distance_m": 27.2,
+      "road": "Packard Road & Woodmanor Court",
+      "osm_type": "node",
+      "osm_id": "3509089936"
+    },
+    "2040350499": {
+      "label": "WAAM Radio",
+      "kind": "amenity",
+      "distance_m": 68.0,
+      "road": "Esplanade Lane",
+      "osm_type": "way",
+      "osm_id": "485521098"
+    },
+    "2091987888": {
+      "label": "Near Bay Hill Court",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Bay Hill Court"
+    },
+    "2091987926": {
+      "label": "Near Arcadia Drive & Landin Trail",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Arcadia Drive & Landin Trail"
+    },
+    "2239148873": {
+      "label": "CVS Pharmacy",
+      "kind": "amenity",
+      "distance_m": 111.7,
+      "road": "Fieldcrest Court & Fieldcrest Street",
+      "osm_type": "node",
+      "osm_id": "4186033242"
+    },
+    "2295221581": {
+      "label": "Skyline Small Baseball Diamond",
+      "kind": "leisure",
+      "distance_m": 181.2,
+      "road": "Tall Oaks Drive & Oak Hills Drive",
+      "osm_type": "way",
+      "osm_id": "220367009"
+    },
+    "2296555625": {
+      "label": "The Roof Resource",
+      "kind": "office",
+      "distance_m": 72.1,
+      "road": "South State Street & Oakbrook Drive",
+      "osm_type": "way",
+      "osm_id": "1467374919"
+    },
+    "2343810599": {
+      "label": "Dhu Varren + Carrot Way",
+      "kind": "public_transport",
+      "distance_m": 15.3,
+      "road": "Dhu Varren Road & Carrot Way",
+      "osm_type": "node",
+      "osm_id": "9878273930"
+    },
+    "2674961931": {
+      "label": "University of Michigan Soccer Complex",
+      "kind": "leisure",
+      "distance_m": 139.5,
+      "road": "Lynden Glen Drive",
+      "osm_type": "way",
+      "osm_id": "249653190"
+    },
+    "268167326": {
+      "label": "Scio Ridge + Sudbury",
+      "kind": "public_transport",
+      "distance_m": 12.0,
+      "road": "Scio Ridge Road & Chamberlain Circle",
+      "osm_type": "node",
+      "osm_id": "5799783994"
+    },
+    "2689136945": {
+      "label": "Near Stonebridge Drive North",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Stonebridge Drive North"
+    },
+    "2692022772": {
+      "label": "The Cliff Keen Building",
+      "kind": "building",
+      "distance_m": 159.0,
+      "road": "Addington Lane",
+      "osm_type": "way",
+      "osm_id": "385056404"
+    },
+    "2889761704": {
+      "label": "Near Earhart Road & High Ridge",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Earhart Road & High Ridge"
+    },
+    "29311356": {
+      "label": "The Discovery Center",
+      "kind": "amenity",
+      "distance_m": 142.7,
+      "road": "South Maple Road & Russel Street",
+      "osm_type": "way",
+      "osm_id": "441292470"
+    },
+    "29823063": {
+      "label": "Current Electrical Systems",
+      "kind": "craft",
+      "distance_m": 63.9,
+      "road": "Plaza Drive",
+      "osm_type": "node",
+      "osm_id": "4029305340"
+    },
+    "308163105": {
+      "label": "FXB Outbound",
+      "kind": "public_transport",
+      "distance_m": 45.3,
+      "road": "Hayward Street & Beal Avenue",
+      "osm_type": "node",
+      "osm_id": "955598507"
+    },
+    "3414558280": {
+      "label": "Club House",
+      "kind": "building",
+      "distance_m": 150.9,
+      "road": "Columbus Lane",
+      "osm_type": "way",
+      "osm_id": "617571007"
+    },
+    "3705281669": {
+      "label": "Washtenaw Intermediate School District",
+      "kind": "office",
+      "distance_m": 226.5,
+      "road": "South Wagner Road & Hawk Crest Road",
+      "osm_type": "way",
+      "osm_id": "260653029"
+    },
+    "3705291546": {
+      "label": "Orchard Hills Athletic Club Pool",
+      "kind": "leisure",
+      "distance_m": 255.8,
+      "road": "Bluett Road & Georgetown Boulevard",
+      "osm_type": "way",
+      "osm_id": "544646992"
+    },
+    "3705291555": {
+      "label": "Northeast Area Water Tower Project - 2002",
+      "kind": "historic",
+      "distance_m": 233.2,
+      "road": "Ardenne Drive & Georgetown Boulevard",
+      "osm_type": "node",
+      "osm_id": "10124651477"
+    },
+    "3793848686": {
+      "label": "Stone School Rd + Stone School Cir (towards BTC)",
+      "kind": "public_transport",
+      "distance_m": 25.5,
+      "road": "Stone School Road & Stone School Circle",
+      "osm_type": "node",
+      "osm_id": "3894222073"
+    },
+    "4135774028": {
+      "label": "N - OakValley east of Ann Arbor-Saline",
+      "kind": "public_transport",
+      "distance_m": 140.0,
+      "road": "Breckland Drive & Bent Trail Drive",
+      "osm_type": "node",
+      "osm_id": "4763445626"
+    },
+    "4306881815": {
+      "label": "Child Care Center",
+      "kind": "building",
+      "distance_m": 140.8,
+      "road": "Glazier Way",
+      "osm_type": "way",
+      "osm_id": "292062568"
+    },
+    "4391625759": {
+      "label": "Knight's Steakhouse",
+      "kind": "amenity",
+      "distance_m": 132.8,
+      "road": "Dexter Avenue",
+      "osm_type": "way",
+      "osm_id": "339994751"
+    },
+    "4393371127": {
+      "label": "University Hospital (Mott)",
+      "kind": "public_transport",
+      "distance_m": 76.0,
+      "road": "Simpson Drive & East Medical Center Drive",
+      "osm_type": "node",
+      "osm_id": "5763980406"
+    },
+    "4398714144": {
+      "label": "Mary Jo Sandberg, D.D.S.",
+      "kind": "amenity",
+      "distance_m": 172.7,
+      "road": "Londonderry Road & Bedford Road",
+      "osm_type": "way",
+      "osm_id": "461987309"
+    },
+    "4561871378": {
+      "label": "Gallup One Stop",
+      "kind": "shop",
+      "distance_m": 65.5,
+      "road": "Cascade Drive",
+      "osm_type": "way",
+      "osm_id": "381532665"
+    },
+    "5006102740": {
+      "label": "Michigan Subdivision",
+      "kind": "railway",
+      "distance_m": 139.0,
+      "road": "Huron View Boulevard & Research Drive",
+      "osm_type": "way",
+      "osm_id": "9257806"
+    },
+    "5048575416": {
+      "label": "Near Montith Drive & Lilac Lane",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Montith Drive & Lilac Lane"
+    },
+    "5107738831": {
+      "label": "Little Free Library",
+      "kind": "amenity",
+      "distance_m": 128.3,
+      "road": "Geddes Avenue & Orchard Hills Drive",
+      "osm_type": "node",
+      "osm_id": "9283881375"
+    },
+    "5557291678": {
+      "label": "Ann Arbor District Library Traverwood",
+      "kind": "amenity",
+      "distance_m": 218.3,
+      "road": "Traverwood Drive & Tapio Circle",
+      "osm_type": "way",
+      "osm_id": "310992046"
+    },
+    "6049250078": {
+      "label": "1306 Fountain Street",
+      "kind": "address",
+      "distance_m": 90.2,
+      "road": "Sunset Road & Fountain Street"
+    },
+    "6169574372": {
+      "label": "Speedway",
+      "kind": "shop",
+      "distance_m": 231.4,
+      "road": "Ivywood Drive",
+      "osm_type": "node",
+      "osm_id": "8441975834"
+    },
+    "62469758": {
+      "label": "Ann Arbor Fire Department Station 5",
+      "kind": "amenity",
+      "distance_m": 38.0,
+      "road": "Beal Avenue & McIntyre Drive",
+      "osm_type": "way",
+      "osm_id": "298600690"
+    },
+    "62469790": {
+      "label": "Cooley Lab Outbound",
+      "kind": "public_transport",
+      "distance_m": 49.7,
+      "road": "Beal Avenue & Bonisteel Boulevard",
+      "osm_type": "node",
+      "osm_id": "5896935618"
+    },
+    "62476054": {
+      "label": "N - Oakbrook west of Northbrook",
+      "kind": "public_transport",
+      "distance_m": 47.2,
+      "road": "Oakbrook Drive & Northbrook Place",
+      "osm_type": "node",
+      "osm_id": "4763445630"
+    },
+    "62477869": {
+      "label": "Jewish Community Center of Greater Ann Arbor",
+      "kind": "amenity",
+      "distance_m": 286.7,
+      "road": "Tacoma Circle",
+      "osm_type": "way",
+      "osm_id": "1063765387"
+    },
+    "62478582": {
+      "label": "Liberty + Dartmoor",
+      "kind": "public_transport",
+      "distance_m": 72.8,
+      "road": "West Liberty Street & Dartmoor Road",
+      "osm_type": "node",
+      "osm_id": "5799783989"
+    },
+    "62479789": {
+      "label": "Miller P&R Lot",
+      "kind": "public_transport",
+      "distance_m": 297.6,
+      "road": "Miller Road",
+      "osm_type": "node",
+      "osm_id": "1586565353"
+    },
+    "62483492": {
+      "label": "Triangle Lot",
+      "kind": "amenity",
+      "distance_m": 50.0,
+      "road": "East Stadium Boulevard & Kipke Drive",
+      "osm_type": "way",
+      "osm_id": "1093577848"
+    },
+    "62484035": {
+      "label": "UMICH N434",
+      "kind": "public_transport",
+      "distance_m": 28.1,
+      "road": "Hubbard Street & Huron Parkway",
+      "osm_type": "node",
+      "osm_id": "10860372967"
+    },
+    "62484067": {
+      "label": "ChargePoint",
+      "kind": "amenity",
+      "distance_m": 198.8,
+      "road": "Hubbard Street & Dean Road",
+      "osm_type": "node",
+      "osm_id": "11914091516"
+    },
+    "62485355": {
+      "label": "Creal Park",
+      "kind": "leisure",
+      "distance_m": 278.9,
+      "road": "Hillridge Boulevard & Wines Drive",
+      "osm_type": "way",
+      "osm_id": "394236849"
+    },
+    "62486736": {
+      "label": "Garden Homes Park",
+      "kind": "leisure",
+      "distance_m": 167.3,
+      "road": "Fulmer Street & Foss Court",
+      "osm_type": "way",
+      "osm_id": "394236854"
+    },
+    "62487079": {
+      "label": "Near Scio Ridge Road & Harley Drive",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Scio Ridge Road & Harley Drive"
+    },
+    "62487854": {
+      "label": "Near Pheasant Drive & Deerfield Place",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Pheasant Drive & Deerfield Place"
+    },
+    "62487953": {
+      "label": "Near Kuehnle Avenue & West Sequoia Parkway",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Kuehnle Avenue & West Sequoia Parkway"
+    },
+    "62487981": {
+      "label": "Kelly Park",
+      "kind": "leisure",
+      "distance_m": 109.2,
+      "road": "Patricia Avenue & West Sequoia Parkway",
+      "osm_type": "way",
+      "osm_id": "394236857"
+    },
+    "62488186": {
+      "label": "Scio Church + Oak Valley",
+      "kind": "public_transport",
+      "distance_m": 59.3,
+      "road": "Scio Church Road & Oak Valley Drive",
+      "osm_type": "node",
+      "osm_id": "5800073631"
+    },
+    "62488238": {
+      "label": "N - Oak Valley west of Silver Spring",
+      "kind": "public_transport",
+      "distance_m": 38.0,
+      "road": "Oak Valley Drive & Silver Spring Drive",
+      "osm_type": "node",
+      "osm_id": "4801814630"
+    },
+    "62488420": {
+      "label": "Jewel Heart",
+      "kind": "tourism",
+      "distance_m": 174.5,
+      "road": "Oak Valley Drive & Ranchero Drive",
+      "osm_type": "node",
+      "osm_id": "1045519466"
+    },
+    "62488935": {
+      "label": "Platt + Verle (towards Ann Arbor)",
+      "kind": "public_transport",
+      "distance_m": 63.3,
+      "road": "Lorraine Street & Belvidere Street",
+      "osm_type": "node",
+      "osm_id": "5246288811"
+    },
+    "62489650": {
+      "label": "Los Amigos",
+      "kind": "amenity",
+      "distance_m": 100.0,
+      "road": "Briarwood Circle & Hilton Boulevard",
+      "osm_type": "way",
+      "osm_id": "339360601"
+    },
+    "62490251": {
+      "label": "Near Windshadow Drive",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Windshadow Drive"
+    },
+    "62490273": {
+      "label": "S - Statdium east of Greenview",
+      "kind": "public_transport",
+      "distance_m": 260.3,
+      "road": "Greenview Drive & Avondale Avenue",
+      "osm_type": "node",
+      "osm_id": "4801812218"
+    },
+    "62491365": {
+      "label": "Ruth Residence Hall",
+      "kind": "building",
+      "distance_m": 219.5,
+      "road": "Geddes Road & Wind Crest Drive",
+      "osm_type": "way",
+      "osm_id": "404691826"
+    },
+    "62491553": {
+      "label": "Near Laurentide Drive & Roseland Drive",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Laurentide Drive & Roseland Drive"
+    },
+    "62492090": {
+      "label": "Near Lansdown Road & Westridge Road",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Lansdown Road & Westridge Road"
+    },
+    "62492540": {
+      "label": "Scio Church + Covington",
+      "kind": "public_transport",
+      "distance_m": 109.9,
+      "road": "Scio Church Road & Old Pear Tree Court",
+      "osm_type": "node",
+      "osm_id": "5800073632"
+    },
+    "62492569": {
+      "label": "Wennersten Dental Care",
+      "kind": "amenity",
+      "distance_m": 84.3,
+      "road": "South Main Street & Scio Church Road",
+      "osm_type": "way",
+      "osm_id": "503106117"
+    },
+    "62492628": {
+      "label": "Devonshire Park",
+      "kind": "leisure",
+      "distance_m": 290.9,
+      "road": "Hickory Lane & Chestnut Road",
+      "osm_type": "way",
+      "osm_id": "458848401"
+    },
+    "62493552": {
+      "label": "Kingdom Hall of Jehovah's Witnesses",
+      "kind": "amenity",
+      "distance_m": 258.3,
+      "road": "Timber Hill Drive & Gray Fox Court",
+      "osm_type": "way",
+      "osm_id": "538102818"
+    },
+    "62493663": {
+      "label": "Buhr Park Outdoor Ice Arena",
+      "kind": "leisure",
+      "distance_m": 152.0,
+      "road": "Manchester Road & Manchester Court",
+      "osm_type": "way",
+      "osm_id": "222485471"
+    },
+    "62495264": {
+      "label": "Social Security Administration",
+      "kind": "building",
+      "distance_m": 137.2,
+      "road": "Research Park Drive & South Research Park Drive",
+      "osm_type": "way",
+      "osm_id": "384459255"
+    },
+    "62496070": {
+      "label": "Riverwood Nature Area",
+      "kind": "leisure",
+      "distance_m": 120.5,
+      "road": "Newport Road & Alexandria Boulevard",
+      "osm_type": "way",
+      "osm_id": "1201177235"
+    },
+    "62496102": {
+      "label": "Michigan Subdivision",
+      "kind": "railway",
+      "distance_m": 168.3,
+      "road": "Newport Road & White Oak Drive",
+      "osm_type": "way",
+      "osm_id": "9749269"
+    },
+    "62496130": {
+      "label": "Rudolf Steiner School",
+      "kind": "amenity",
+      "distance_m": 265.3,
+      "road": "Newport Road & Englave Drive",
+      "osm_type": "way",
+      "osm_id": "220396405"
+    },
+    "62496800": {
+      "label": "Near Byington Boulevard & Daleview Drive",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Byington Boulevard & Daleview Drive"
+    },
+    "62496828": {
+      "label": "Near Daleview Drive & Byington Boulevard",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Daleview Drive & Byington Boulevard"
+    },
+    "62496881": {
+      "label": "ProClean Power Washing Ann Arbor",
+      "kind": "office",
+      "distance_m": 154.2,
+      "road": "Jones Drive & Arbor Spring",
+      "osm_type": "node",
+      "osm_id": "5917808040"
+    },
+    "62497690": {
+      "label": "Near Danbury Lane & Belgrade Notch Street",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Danbury Lane & Belgrade Notch Street"
+    },
+    "62497994": {
+      "label": "Palace Tang",
+      "kind": "amenity",
+      "distance_m": 228.7,
+      "road": "Willowtree Lane & Lake Lila Lane",
+      "osm_type": "node",
+      "osm_id": "11945514673"
+    },
+    "62498536": {
+      "label": "129 Grandview Drive",
+      "kind": "address",
+      "distance_m": 64.2,
+      "road": "Dexter Avenue & Westwood Avenue"
+    },
+    "62500555": {
+      "label": "Berkshire Creek Nature Area",
+      "kind": "leisure",
+      "distance_m": 169.6,
+      "road": "Exmoor Road & Stonehaven Street",
+      "osm_type": "way",
+      "osm_id": "458848420"
+    },
+    "62500572": {
+      "label": "T-ball Field",
+      "kind": "leisure",
+      "distance_m": 96.3,
+      "road": "South State Street & Airport Drive",
+      "osm_type": "way",
+      "osm_id": "283263799"
+    },
+    "62500576": {
+      "label": "Boone & Darr Mechanical Contractors",
+      "kind": "craft",
+      "distance_m": 104.4,
+      "road": "South State Street & Concourse Drive",
+      "osm_type": "way",
+      "osm_id": "403171147"
+    },
+    "62500913": {
+      "label": "AAATA 612",
+      "kind": "public_transport",
+      "distance_m": 45.2,
+      "road": "Geddes Road & Huron Parkway",
+      "osm_type": "node",
+      "osm_id": "13639878952"
+    },
+    "62500943": {
+      "label": "Racquet Club of Ann Arbor",
+      "kind": "leisure",
+      "distance_m": 115.8,
+      "road": "South Huron Parkway & Huron Parkway",
+      "osm_type": "way",
+      "osm_id": "525166338"
+    },
+    "62501279": {
+      "label": "United States Postal Service",
+      "kind": "amenity",
+      "distance_m": 215.7,
+      "road": "Bluett Road & Alton Court",
+      "osm_type": "way",
+      "osm_id": "457076714"
+    },
+    "62502390": {
+      "label": "E - Maple north of Dicken",
+      "kind": "public_transport",
+      "distance_m": 23.6,
+      "road": "South Maple Road & Dicken Drive",
+      "osm_type": "node",
+      "osm_id": "4801814625"
+    },
+    "62502413": {
+      "label": "Seyfried Park",
+      "kind": "leisure",
+      "distance_m": 163.4,
+      "road": "Ann Arbor-Saline Road & South Maple Road",
+      "osm_type": "way",
+      "osm_id": "851182974"
+    },
+    "62502431": {
+      "label": "Near South Maple Road & Southwoods Trail",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "South Maple Road & Southwoods Trail"
+    },
+    "62502776": {
+      "label": "Victory Lane Quick Oil Change",
+      "kind": "shop",
+      "distance_m": 29.6,
+      "road": "Pointe Lane & Pointe Crossing Street",
+      "osm_type": "way",
+      "osm_id": "1517228748"
+    },
+    "62502836": {
+      "label": "Ellsworth + Jonathan",
+      "kind": "public_transport",
+      "distance_m": 23.6,
+      "road": "East Ellsworth Road & Jonathan Court",
+      "osm_type": "node",
+      "osm_id": "5177408626"
+    },
+    "62502877": {
+      "label": "Green Acres Cannabis Co.",
+      "kind": "building",
+      "distance_m": 299.6,
+      "road": "East Ellsworth Road & Trade Center Drive",
+      "osm_type": "way",
+      "osm_id": "298240795"
+    },
+    "62503441": {
+      "label": "Dolph Nature Area",
+      "kind": "leisure",
+      "distance_m": 241.1,
+      "road": "Sunnywood Drive & Mohawk Avenue",
+      "osm_type": "way",
+      "osm_id": "460247750"
+    },
+    "62506266": {
+      "label": "Kilburn Park",
+      "kind": "leisure",
+      "distance_m": 274.4,
+      "road": "Dunwoodie Road & Kilburn Park Circle",
+      "osm_type": "way",
+      "osm_id": "394889907"
+    },
+    "62507802": {
+      "label": "Near West Waters Road & East Arbor Road",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "West Waters Road & East Arbor Road"
+    },
+    "62507816": {
+      "label": "Near West Waters Road & Alex Drive",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "West Waters Road & Alex Drive"
+    },
+    "62507830": {
+      "label": "Near West Waters Road & Trillium Lane",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "West Waters Road & Trillium Lane"
+    },
+    "62507923": {
+      "label": "2820 Verle Avenue",
+      "kind": "address",
+      "distance_m": 24.9,
+      "road": "Verle Avenue & Marshall Street"
+    },
+    "62509144": {
+      "label": "Bromley Park",
+      "kind": "leisure",
+      "distance_m": 111.7,
+      "road": "Aurora Street & Burlington Street",
+      "osm_type": "way",
+      "osm_id": "394889906"
+    },
+    "62509446": {
+      "label": "Near North Wagner Road & Wagner Court",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "North Wagner Road & Wagner Court"
+    },
+    "62510069": {
+      "label": "Near Timber Trail & Riverwood Drive",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Timber Trail & Riverwood Drive"
+    },
+    "62511705": {
+      "label": "Natural Area Preservation",
+      "kind": "office",
+      "distance_m": 251.0,
+      "road": "Chalmers Drive & Riverside Drive",
+      "osm_type": "way",
+      "osm_id": "533261367"
+    },
+    "62513813": {
+      "label": "Ann Arbor Public Schools",
+      "kind": "building",
+      "distance_m": 136.5,
+      "road": "Earhart Road & Barnyard Bend",
+      "osm_type": "way",
+      "osm_id": "650818465"
+    },
+    "62515171": {
+      "label": "Near Fuller Road & Fuller Court",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Fuller Road & Fuller Court"
+    },
+    "62515656": {
+      "label": "Burns Park Warming Hut",
+      "kind": "building",
+      "distance_m": 106.2,
+      "road": "Wells Street & Martin Place",
+      "osm_type": "way",
+      "osm_id": "458841908"
+    },
+    "62515783": {
+      "label": "Redeemer Lutheran Church",
+      "kind": "place",
+      "distance_m": 80.8,
+      "road": "Hewett Drive & Redeemer Avenue",
+      "osm_type": "way",
+      "osm_id": "506085372"
+    },
+    "62516969": {
+      "label": "Near Pratt Road & Pratt Ridge Court",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Pratt Road & Pratt Ridge Court"
+    },
+    "62517971": {
+      "label": "#6 Ellsworth Outbound",
+      "kind": "public_transport",
+      "distance_m": 14.3,
+      "road": "South Industrial Highway & Rosewood Street",
+      "osm_type": "node",
+      "osm_id": "3368269428"
+    },
+    "62518934": {
+      "label": "Traver Lakes Association Clubhouse",
+      "kind": "building",
+      "distance_m": 197.2,
+      "road": "Lakehurst Lane",
+      "osm_type": "way",
+      "osm_id": "521092528"
+    },
+    "62519404": {
+      "label": "Carpenter + Carpenter Place (Southbound)",
+      "kind": "public_transport",
+      "distance_m": 38.7,
+      "road": "Carpenter Road & Chester Drive",
+      "osm_type": "node",
+      "osm_id": "9566449071"
+    },
+    "62520745": {
+      "label": "Bird Hills Nature Area",
+      "kind": "leisure",
+      "distance_m": 121.7,
+      "road": "West Huron River Drive & Huron River Drive",
+      "osm_type": "way",
+      "osm_id": "394249967"
+    },
+    "62520785": {
+      "label": "Michigan Subdivision",
+      "kind": "railway",
+      "distance_m": 178.2,
+      "road": "West Huron River Drive & Huron River Drive",
+      "osm_type": "way",
+      "osm_id": "9596401"
+    },
+    "62521233": {
+      "label": "Scio Bridge + Walnut Glen",
+      "kind": "public_transport",
+      "distance_m": 130.5,
+      "road": "Rabbit Run Circle",
+      "osm_type": "node",
+      "osm_id": "5799783993"
+    },
+    "62523291": {
+      "label": "Lawton Elementary School",
+      "kind": "amenity",
+      "distance_m": 232.9,
+      "road": "Delaware Drive & Tilsby Court",
+      "osm_type": "way",
+      "osm_id": "306741232"
+    },
+    "62524197": {
+      "label": "Amazon Delivery Station",
+      "kind": "building",
+      "distance_m": 271.2,
+      "road": "Carpenter Road & Cloverlane Drive",
+      "osm_type": "way",
+      "osm_id": "1460762379"
+    },
+    "62526603": {
+      "label": "Pittsfield Substation",
+      "kind": "place",
+      "distance_m": 43.7,
+      "road": "Packard Road & Cherry Tree Lane",
+      "osm_type": "way",
+      "osm_id": "222410221"
+    },
+    "62527114": {
+      "label": "Near Lake Forest Drive East & Lake Forest Drive West",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Lake Forest Drive East & Lake Forest Drive West"
+    },
+    "62529729": {
+      "label": "Near Dhu Varren Road & Dhu Varren Court",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Dhu Varren Road & Dhu Varren Court"
+    },
+    "62530059": {
+      "label": "Near Blakeway Street & East Huron River Drive",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Blakeway Street & East Huron River Drive"
+    },
+    "62531439": {
+      "label": "Packard + Pine Valley (towards BTC)",
+      "kind": "public_transport",
+      "distance_m": 245.7,
+      "road": "Victoria Avenue & Robert Street",
+      "osm_type": "node",
+      "osm_id": "4583459694"
+    },
+    "62531471": {
+      "label": "Las Vegas Park",
+      "kind": "leisure",
+      "distance_m": 103.4,
+      "road": "Palomar Drive & Catalina Drive",
+      "osm_type": "way",
+      "osm_id": "393917970"
+    },
+    "62532081": {
+      "label": "4305 Ridgewood Drive",
+      "kind": "address",
+      "distance_m": 33.1,
+      "road": "Ridgewood Drive & Woodstream Drive"
+    },
+    "62532711": {
+      "label": "Best Buy",
+      "kind": "shop",
+      "distance_m": 118.8,
+      "road": "Coburn Drive & Coburn Court",
+      "osm_type": "way",
+      "osm_id": "304419854"
+    },
+    "62533123": {
+      "label": "Hunt Park",
+      "kind": "leisure",
+      "distance_m": 82.3,
+      "road": "Daniel Street & Brookridge Road",
+      "osm_type": "way",
+      "osm_id": "128652508"
+    },
+    "62533271": {
+      "label": "The Wickfield Center",
+      "kind": "building",
+      "distance_m": 147.6,
+      "road": "Varsity Drive & Phoenix Drive",
+      "osm_type": "way",
+      "osm_id": "190113031"
+    },
+    "62533907": {
+      "label": "2972 Heather Drive",
+      "kind": "address",
+      "distance_m": 96.1,
+      "road": "Hunting Valley Road & Foxcroft Road"
+    },
+    "62535105": {
+      "label": "Michigan Municipal League",
+      "kind": "office",
+      "distance_m": 74.8,
+      "road": "Green Road & Baxter Road",
+      "osm_type": "way",
+      "osm_id": "480865413"
+    },
+    "62536348": {
+      "label": "Near North Wagner Road & Bradford Square Drive",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "North Wagner Road & Bradford Square Drive"
+    },
+    "62536590": {
+      "label": "Near Oakmore Court & Daleview Drive",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Oakmore Court & Daleview Drive"
+    },
+    "62542893": {
+      "label": "Redbud Nature Area",
+      "kind": "leisure",
+      "distance_m": 62.4,
+      "road": "Parkwood Avenue & Jeanne Avenue",
+      "osm_type": "way",
+      "osm_id": "458679948"
+    },
+    "62545264": {
+      "label": "Home2 Suites by Hilton",
+      "kind": "tourism",
+      "distance_m": 163.5,
+      "road": "Signature Boulevard & Waymarket Drive",
+      "osm_type": "way",
+      "osm_id": "1363861689"
+    },
+    "62547127": {
+      "label": "Haisley Elementary School",
+      "kind": "amenity",
+      "distance_m": 267.4,
+      "road": "Bruce Street & Westwood Avenue",
+      "osm_type": "way",
+      "osm_id": "306715087"
+    },
+    "62549242": {
+      "label": "Near Meadow Grove Trail & Bent Trail Drive",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Meadow Grove Trail & Bent Trail Drive"
+    },
+    "62551878": {
+      "label": "Cancer Center",
+      "kind": "building",
+      "distance_m": 132.0,
+      "road": "East Medical Center Drive & West Medical Center Drive",
+      "osm_type": "way",
+      "osm_id": "300848289"
+    },
+    "62552868": {
+      "label": "MI-HQ",
+      "kind": "office",
+      "distance_m": 172.9,
+      "road": "South Wagner Road & Jackson Plaza",
+      "osm_type": "way",
+      "osm_id": "445952955"
+    },
+    "62553026": {
+      "label": "The Church of Jesus Christ of Latter-day Saints",
+      "kind": "amenity",
+      "distance_m": 155.7,
+      "road": "Vintage Valley Road & Pepper Pike Street",
+      "osm_type": "way",
+      "osm_id": "412089802"
+    },
+    "62555685": {
+      "label": "Turnberry Park",
+      "kind": "leisure",
+      "distance_m": 90.9,
+      "road": "Turnberry Lane & Monument Drive",
+      "osm_type": "way",
+      "osm_id": "458672978"
+    },
+    "62557738": {
+      "label": "3112 Cedarbrook Road",
+      "kind": "address",
+      "distance_m": 86.6,
+      "road": "Rumsey Drive & Lexington Drive"
+    },
+    "62563049": {
+      "label": "Sunset Brooks Nature Area",
+      "kind": "leisure",
+      "distance_m": 165.9,
+      "road": "Vesper Road & Brooks Street",
+      "osm_type": "way",
+      "osm_id": "394236860"
+    },
+    "62564598": {
+      "label": "Chase",
+      "kind": "amenity",
+      "distance_m": 51.8,
+      "road": "South Main Street & West Eisenhower Parkway",
+      "osm_type": "way",
+      "osm_id": "338216700"
+    },
+    "62570529": {
+      "label": "Near Whitmore Lake Road & Dhu Varren Road",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Whitmore Lake Road & Dhu Varren Road"
+    },
+    "62573987": {
+      "label": "Saint Paul Lutheran School",
+      "kind": "amenity",
+      "distance_m": 267.1,
+      "road": "Earhart Road & Pine Brae Street",
+      "osm_type": "way",
+      "osm_id": "306855295"
+    },
+    "62574629": {
+      "label": "Party City",
+      "kind": "shop",
+      "distance_m": 219.4,
+      "road": "Brookfield Drive",
+      "osm_type": "node",
+      "osm_id": "4988697339"
+    },
+    "62576486": {
+      "label": "High Point",
+      "kind": "amenity",
+      "distance_m": 281.9,
+      "road": "Snowberry Ridge Court & Butterweed Court",
+      "osm_type": "node",
+      "osm_id": "2661725407"
+    },
+    "62578580": {
+      "label": "Arrowwood Building 57",
+      "kind": "building",
+      "distance_m": 147.8,
+      "road": "Leslie Park Circle",
+      "osm_type": "way",
+      "osm_id": "468642170"
+    },
+    "62580458": {
+      "label": "Ann Arbor Township Fire Station #2",
+      "kind": "amenity",
+      "distance_m": 71.5,
+      "road": "Woodridge Avenue & Goss Road",
+      "osm_type": "way",
+      "osm_id": "368010860"
+    },
+    "62588850": {
+      "label": "Hampton Inn & Suites",
+      "kind": "tourism",
+      "distance_m": 166.5,
+      "road": "Valley Drive & Glenwood Street",
+      "osm_type": "way",
+      "osm_id": "441260959"
+    },
+    "62599943": {
+      "label": "Near Huntington Place & Onaway Place",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Huntington Place & Onaway Place"
+    },
+    "62609745": {
+      "label": "Near Whitmore Lake Road & East Barton Lane",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Whitmore Lake Road & East Barton Lane"
+    },
+    "62610646": {
+      "label": "Near Burr Oak Drive & Dunnington Drive",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Burr Oak Drive & Dunnington Drive"
+    },
+    "62617549": {
+      "label": "W- Lohr at Kohls",
+      "kind": "public_transport",
+      "distance_m": 197.6,
+      "road": "Lohr Road & Lohr Circle",
+      "osm_type": "node",
+      "osm_id": "4763445656"
+    },
+    "62619778": {
+      "label": "George Meyer Company",
+      "kind": "shop",
+      "distance_m": 253.3,
+      "road": "Pontiac Trail & Cornwell Drive",
+      "osm_type": "node",
+      "osm_id": "9982223156"
+    },
+    "68133475": {
+      "label": "Super Liquor IV",
+      "kind": "shop",
+      "distance_m": 49.6,
+      "road": "State Circle & South State Street",
+      "osm_type": "way",
+      "osm_id": "400453700"
+    },
+    "29311256": {
+      "label": "Maizie's",
+      "kind": "amenity",
+      "distance_m": 46.1,
+      "road": "Fletcher Street & North University Avenue",
+      "osm_type": "node",
+      "osm_id": "3072665434"
+    },
+    "4965591378": {
+      "label": "Saint Thomas School",
+      "kind": "amenity",
+      "distance_m": 87.9,
+      "road": "Depot Street",
+      "osm_type": "way",
+      "osm_id": "193502047"
+    },
+    "542245175": {
+      "label": "Glacier Hills Care and Rehab Center",
+      "kind": "amenity",
+      "distance_m": 150.2,
+      "road": "Glacier Hills Drive South & Glacier Hills Drive North",
+      "osm_type": "way",
+      "osm_id": "225365834"
+    },
+    "62564606": {
+      "label": "Bank of America",
+      "kind": "amenity",
+      "distance_m": 62.0,
+      "road": "Plaza Road & East Eisenhower Parkway",
+      "osm_type": "way",
+      "osm_id": "287416838"
+    },
+    "62569815": {
+      "label": "Near Lohr Road & Stonebridge Boulevard East",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Lohr Road & Stonebridge Boulevard East"
+    },
+    "963585186": {
+      "label": "Earhart Manor",
+      "kind": "building",
+      "distance_m": 143.0,
+      "road": "Geddes Road",
+      "osm_type": "way",
+      "osm_id": "404691846"
+    },
+    "2004877633": {
+      "label": "NC Auxillary Support Building",
+      "kind": "building",
+      "distance_m": 157.7,
+      "road": "Huron Parkway",
+      "osm_type": "way",
+      "osm_id": "292062567"
+    },
+    "2035736559": {
+      "label": "NSF International",
+      "kind": "office",
+      "distance_m": 282.2,
+      "road": "Hillside Drive",
+      "osm_type": "way",
+      "osm_id": "298812239"
+    },
+    "2035847089": {
+      "label": "Narrow Gage Way Park",
+      "kind": "leisure",
+      "distance_m": 218.8,
+      "road": "Green Road South",
+      "osm_type": "way",
+      "osm_id": "458993154"
+    },
+    "2958897474": {
+      "label": "N441: NCRC NB Huron Pkwy",
+      "kind": "public_transport",
+      "distance_m": 105.0,
+      "road": "Huron Parkway",
+      "osm_type": "node",
+      "osm_id": "5896935642"
+    },
+    "5050082069": {
+      "label": "Geddes Lake Condominiums",
+      "kind": "place",
+      "distance_m": 204.3,
+      "road": "Heritage Drive",
+      "osm_type": "way",
+      "osm_id": "733991930"
+    },
+    "5685650121": {
+      "label": "Knox Presbyterian Church",
+      "kind": "amenity",
+      "distance_m": 219.2,
+      "road": "South Wagner Road",
+      "osm_type": "way",
+      "osm_id": "485450897"
+    },
+    "62484954": {
+      "label": "The Session Room",
+      "kind": "amenity",
+      "distance_m": 53.1,
+      "road": "Nancy Drive & Jackson Road",
+      "osm_type": "way",
+      "osm_id": "445952981"
+    },
+    "62500883": {
+      "label": "AAATA 306",
+      "kind": "public_transport",
+      "distance_m": 80.7,
+      "road": "Glazier Way & Huron Parkway",
+      "osm_type": "node",
+      "osm_id": "10837215691"
+    },
+    "62557421": {
+      "label": "Michigan Subdivision",
+      "kind": "railway",
+      "distance_m": 180.1,
+      "road": "Fuller Road",
+      "osm_type": "way",
+      "osm_id": "12388883"
+    },
+    "62570103": {
+      "label": "Near West Ellsworth Road & South Wagner Road",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "West Ellsworth Road & South Wagner Road"
+    },
+    "62622469": {
+      "label": "Palmer House",
+      "kind": "tourism",
+      "distance_m": 74.8,
+      "road": "Orchard Hills Court & Orchard Hills Drive",
+      "osm_type": "way",
+      "osm_id": "1001275491"
+    },
+    "62474457": {
+      "label": "Amazon Delivery Station",
+      "kind": "building",
+      "distance_m": 223.2,
+      "road": "",
+      "osm_type": "way",
+      "osm_id": "1460762379"
+    },
+    "62475320": {
+      "label": "Green Acres Cannabis Co.",
+      "kind": "building",
+      "distance_m": 122.8,
+      "road": "",
+      "osm_type": "way",
+      "osm_id": "298240795"
+    },
+    "62476172": {
+      "label": "Atrium Office Center 3",
+      "kind": "building",
+      "distance_m": 121.6,
+      "road": "",
+      "osm_type": "way",
+      "osm_id": "190113062"
+    },
+    "62477640": {
+      "label": "Kapnick Insurance Group",
+      "kind": "office",
+      "distance_m": 86.3,
+      "road": "",
+      "osm_type": "way",
+      "osm_id": "338215120"
+    },
+    "62479244": {
+      "label": "Plymouth Green Innovation Community",
+      "kind": "building",
+      "distance_m": 175.1,
+      "road": "",
+      "osm_type": "way",
+      "osm_id": "33688196"
+    },
+    "62506922": {
+      "label": "Olson Park",
+      "kind": "leisure",
+      "distance_m": 234.4,
+      "road": "",
+      "osm_type": "way",
+      "osm_id": "284757809"
+    },
+    "10264975779": {
+      "label": "Kuebler Langford Nature Area",
+      "kind": "leisure",
+      "distance_m": 241.5,
+      "road": "Huron View Boulevard",
+      "osm_type": "way",
+      "osm_id": "394249969"
+    },
+    "11956186340": {
+      "label": "Road and Track",
+      "kind": "office",
+      "distance_m": 77.8,
+      "road": "King George Boulevard & Alpine Drive",
+      "osm_type": "node",
+      "osm_id": "3868147183"
+    },
+    "2043272517": {
+      "label": "Deborah Gimbel Memorial Overlook",
+      "kind": "tourism",
+      "distance_m": 105.8,
+      "road": "Geddes Heights Drive",
+      "osm_type": "node",
+      "osm_id": "3222093732"
+    },
+    "27489081": {
+      "label": "2245 Indian Creek Circle",
+      "kind": "address",
+      "distance_m": 30.3,
+      "road": "Indian Creek Circle"
+    },
+    "3035626692": {
+      "label": "Near Airport Drive",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Airport Drive"
+    },
+    "4389112466": {
+      "label": "Arrowwood Parking Lot K",
+      "kind": "amenity",
+      "distance_m": 25.9,
+      "road": "Arrowwood Trail",
+      "osm_type": "way",
+      "osm_id": "469499618"
+    },
+    "62498359": {
+      "label": "Near Rouse Creek Court",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Rouse Creek Court"
+    },
+    "62503333": {
+      "label": "Turner's Nursery & Landscaping",
+      "kind": "shop",
+      "distance_m": 228.9,
+      "road": "Ann Arbor-Saline Road",
+      "osm_type": "way",
+      "osm_id": "686348520"
+    },
+    "62508747": {
+      "label": "Near Alex Drive",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Alex Drive"
+    },
+    "62528616": {
+      "label": "Near Holden Drive",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Holden Drive"
+    },
+    "62540750": {
+      "label": "Near Overridge Drive",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Overridge Drive"
+    },
+    "62544568": {
+      "label": "Near Trillium Lane",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Trillium Lane"
+    },
+    "62560115": {
+      "label": "Near Country Club Road",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Country Club Road"
+    },
+    "62589050": {
+      "label": "Washtenong Memorial Park",
+      "kind": "place",
+      "distance_m": 291.4,
+      "road": "Barton Farm Drive",
+      "osm_type": "way",
+      "osm_id": "294882619"
+    },
+    "62609405": {
+      "label": "Near Bay Ridge Drive",
+      "kind": "road",
+      "distance_m": 0.0,
+      "road": "Bay Ridge Drive"
+    }
+  }
+}

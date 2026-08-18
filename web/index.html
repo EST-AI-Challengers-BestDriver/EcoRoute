@@ -186,26 +186,70 @@
           <div>
             <div class="eyebrow">WEEKLY ECO REPORT</div>
             <h2 id="weekly-title">이번 주 탄소 절감 기록</h2>
-            <p>선택한 요일에 기록되며, 같은 요일은 가장 최근 결과로 교체됩니다.</p>
+            <p>기록된 선택 경로와 가장 빠른 경로의 주간 합계를 비교합니다.</p>
           </div>
           <div id="weekly-progress" class="weekly-progress">0 / 7일</div>
         </div>
 
-        <div class="weekly-summary-grid">
-          <article class="weekly-summary primary">
-            <small id="weekly-total-label">주간 총 CO₂ 절감률</small>
-            <strong id="weekly-total">0.0%</strong>
-            <span>완료한 경로 전체의 가중 상대 비교</span>
+        <div class="weekly-comparison-grid" aria-label="주간 경로 지표 비교">
+          <article class="weekly-comparison-card">
+            <div class="weekly-card-heading">
+              <h3>예상 CO₂ 배출량</h3>
+              <span>모델 환산값</span>
+            </div>
+            <div class="weekly-metric-row chosen">
+              <span><i aria-hidden="true"></i>선택 경로</span>
+              <strong id="weekly-co2-chosen">0.00 <small>kgCO₂eq</small></strong>
+            </div>
+            <div class="weekly-metric-row baseline">
+              <span><i aria-hidden="true"></i>가장 빠른 경로</span>
+              <strong id="weekly-co2-fastest">0.00 <small>kgCO₂eq</small></strong>
+            </div>
           </article>
-          <article class="weekly-summary">
-            <small>일평균 절감률</small>
-            <strong id="weekly-average">0.0%</strong>
-            <span>현재까지 기록된 요일 기준</span>
+
+          <article class="weekly-comparison-card">
+            <div class="weekly-card-heading">
+              <h3>예상 경유 사용량</h3>
+              <span>에너지 환산값</span>
+            </div>
+            <div class="weekly-metric-row chosen">
+              <span><i aria-hidden="true"></i>선택 경로</span>
+              <strong id="weekly-fuel-chosen">0.00 <small>L</small></strong>
+            </div>
+            <div class="weekly-metric-row baseline">
+              <span><i aria-hidden="true"></i>가장 빠른 경로</span>
+              <strong id="weekly-fuel-fastest">0.00 <small>L</small></strong>
+            </div>
           </article>
-          <article class="weekly-summary">
-            <small>가장 높은 절감</small>
-            <strong id="weekly-best">-</strong>
-            <span id="weekly-best-value">아직 기록이 없습니다</span>
+
+          <article class="weekly-comparison-card">
+            <div class="weekly-card-heading">
+              <h3>절약한 비용</h3>
+              <span id="weekly-cost-saving">경유 1,774원/L</span>
+            </div>
+            <div class="weekly-metric-row chosen">
+              <span><i aria-hidden="true"></i>선택 경로</span>
+              <strong id="weekly-cost-chosen">0<small>원</small></strong>
+            </div>
+            <div class="weekly-metric-row baseline">
+              <span><i aria-hidden="true"></i>가장 빠른 경로</span>
+              <strong id="weekly-cost-fastest">0<small>원</small></strong>
+            </div>
+          </article>
+
+          <article class="weekly-comparison-card">
+            <div class="weekly-card-heading">
+              <h3>총 에너지 사용량</h3>
+              <span>기록 요일 합계</span>
+            </div>
+            <div class="weekly-metric-row chosen">
+              <span><i aria-hidden="true"></i>선택 경로</span>
+              <strong id="weekly-energy-chosen">0.00 <small>kWh</small></strong>
+            </div>
+            <div class="weekly-metric-row baseline">
+              <span><i aria-hidden="true"></i>가장 빠른 경로</span>
+              <strong id="weekly-energy-fastest">0.00 <small>kWh</small></strong>
+            </div>
           </article>
         </div>
 
@@ -220,7 +264,7 @@
           <div class="weekly-chart-wrap">
             <div id="weekly-chart" class="weekly-chart" aria-label="요일별 탄소 절감률 막대그래프"></div>
           </div>
-          <p class="weekly-note">각 막대는 해당 요일의 가장 빠른 경로를 기준으로 계산한 상대값입니다. 같은 요일을 다시 기록하면 최신 결과로 교체되며, 기록은 이 탭을 닫으면 삭제됩니다.</p>
+          <p class="weekly-note">각 막대는 해당 요일의 가장 빠른 경로를 기준으로 계산한 상대 변화율입니다. 경유 사용량은 9.8kWh/L, 비용은 사용자가 지정한 1,774원/L를 적용한 모델 기반 참고값입니다. 같은 요일을 다시 기록하면 최신 결과로 교체되며, 기록은 이 탭을 닫으면 삭제됩니다.</p>
         </div>
 
         <button id="weekly-next-route" class="weekly-next-button" type="button" data-go-home>

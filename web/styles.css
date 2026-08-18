@@ -851,3 +851,193 @@ h1,
     -webkit-text-fill-color: currentColor;
   }
 }
+
+/* Weekly report: route totals and diesel-cost comparison */
+.weekly-screen {
+  overflow-y: auto;
+  background:
+    radial-gradient(circle at 9% 18%, rgba(82, 205, 255, .28), transparent 27%),
+    radial-gradient(circle at 92% 28%, rgba(100, 138, 255, .18), transparent 31%),
+    linear-gradient(145deg, #e5f7ff 0%, #f8fcff 52%, #e6efff 100%);
+}
+
+.weekly-shell {
+  width: min(1010px, calc(100% - 48px));
+  margin: auto;
+  padding: 30px 0 34px;
+}
+
+.weekly-heading {
+  grid-template-columns: 102px 1fr auto;
+  gap: 22px;
+}
+
+.weekly-heading h2 {
+  margin: 5px 0 4px;
+  color: #103f6d;
+  font-size: 31px;
+}
+
+.weekly-heading p { color: #6a829c; }
+.weekly-progress {
+  min-width: 68px;
+  padding: 10px 16px;
+  color: #0876d8;
+  background: rgba(190, 237, 255, .78);
+  text-align: center;
+}
+
+.weekly-comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.weekly-comparison-card {
+  min-height: 132px;
+  border: 1px solid rgba(255, 255, 255, .82);
+  border-radius: 18px;
+  padding: 15px 22px 12px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, .82), rgba(233, 246, 255, .7));
+  box-shadow: 0 16px 40px rgba(30, 101, 164, .12), inset 0 1px 0 rgba(255, 255, 255, .94);
+  backdrop-filter: blur(24px) saturate(145%);
+  -webkit-backdrop-filter: blur(24px) saturate(145%);
+}
+
+.weekly-card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 4px;
+}
+
+.weekly-card-heading h3 {
+  margin: 0;
+  color: #123d68;
+  font-size: 16px;
+  letter-spacing: -.03em;
+}
+
+.weekly-card-heading > span {
+  border-radius: 99px;
+  padding: 5px 8px;
+  color: #5f7d99;
+  background: rgba(221, 241, 253, .72);
+  font-size: 8px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.weekly-card-heading > span.increase {
+  color: #b94c56;
+  background: rgba(255, 224, 226, .75);
+}
+
+.weekly-metric-row {
+  min-height: 41px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.weekly-metric-row + .weekly-metric-row {
+  border-top: 1px solid rgba(107, 155, 192, .18);
+}
+
+.weekly-metric-row > span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #4f7191;
+  font-size: 12px;
+  font-weight: 720;
+}
+
+.weekly-metric-row i {
+  width: 11px;
+  height: 11px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #98aec5;
+  box-shadow: 0 0 0 4px rgba(152, 174, 197, .08);
+}
+
+.weekly-metric-row.chosen i {
+  background: linear-gradient(145deg, #21b8ef, #2879ed);
+  box-shadow: 0 0 0 4px rgba(35, 148, 238, .09);
+}
+
+.weekly-metric-row strong {
+  color: #5f7696;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: -.03em;
+  white-space: nowrap;
+}
+
+.weekly-metric-row.chosen strong { color: #0878df; }
+.weekly-metric-row strong small {
+  margin-left: 2px;
+  color: inherit;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.weekly-chart-card {
+  margin-top: 16px;
+  border-color: rgba(255, 255, 255, .82);
+  border-radius: 20px;
+  padding: 18px 25px 14px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, .82), rgba(232, 246, 255, .7));
+  box-shadow: 0 17px 42px rgba(30, 101, 164, .12), inset 0 1px 0 rgba(255, 255, 255, .94);
+}
+
+.weekly-chart-head h3 { color: #123d68; font-size: 18px; }
+.weekly-chart-head > span { color: #72879d; }
+.weekly-chart-wrap { padding-top: 0; }
+.weekly-chart {
+  height: 205px;
+  min-width: 620px;
+  gap: 18px;
+  margin-top: 0;
+  padding: 10px 8px 0;
+}
+
+.weekly-day {
+  height: 188px;
+  grid-template-rows: 23px 136px 29px;
+}
+
+.weekly-day-value { color: #0878df; }
+.weekly-bar-track {
+  width: 36px;
+  height: 130px;
+  border-radius: 11px 11px 4px 4px;
+  background: rgba(130, 173, 205, .17);
+}
+
+.weekly-day-bar { background: linear-gradient(180deg, #74dcfa 0%, #2a80ed 100%); }
+.weekly-day-label { color: #345776; }
+.weekly-note { margin-top: 10px; color: #71879a; }
+.weekly-next-button { margin-top: 14px; }
+
+@media (max-width: 760px) {
+  .weekly-shell { width: calc(100% - 28px); padding: 25px 0 32px; }
+  .weekly-heading { grid-template-columns: 1fr auto; gap: 14px; }
+  .weekly-back { grid-column: 1 / -1; width: 94px; }
+  .weekly-heading h2 { font-size: 26px; }
+  .weekly-comparison-grid { grid-template-columns: 1fr; }
+  .weekly-comparison-card { min-height: 124px; padding-inline: 18px; }
+  .weekly-chart-card { padding: 18px 14px 14px; }
+  .weekly-chart-head { align-items: flex-start; flex-direction: column; gap: 5px; }
+}
+
+@media (max-width: 420px) {
+  .weekly-card-heading { align-items: flex-start; flex-direction: column; gap: 6px; }
+  .weekly-comparison-card { padding-top: 17px; }
+  .weekly-metric-row strong { font-size: 18px; }
+}

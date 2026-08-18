@@ -14,6 +14,7 @@ Thumbs.db
 tmp/
 outputs/
 /ECO_Root_GIT/
+/checkpoints/
 
 # Raw eVED/VED files, documents, preprocessing caches, and training tables
 data/raw/

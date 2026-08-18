@@ -65,7 +65,14 @@ class DemoApplication:
         for region_key, region_settings in settings["regions"].items():
             graph_path = root / str(region_settings["graph_path"])
             traffic_path = root / str(region_settings["traffic_profile_path"])
-            for required_path in (graph_path, traffic_path):
+            place_labels_setting = region_settings.get("place_labels_path")
+            place_labels_path = (
+                root / str(place_labels_setting) if place_labels_setting else None
+            )
+            required_paths = [graph_path, traffic_path]
+            if place_labels_path is not None:
+                required_paths.append(place_labels_path)
+            for required_path in required_paths:
                 if not required_path.exists():
                     raise FileNotFoundError(required_path)
             graph = ox.io.load_graphml(graph_path)
@@ -78,6 +85,14 @@ class DemoApplication:
                     "selectable_node_spacing_m", SELECTABLE_NODE_SPACING_M
                 )
             )
+            nodes = select_spaced_nodes(
+                graph,
+                selectable_bounds,
+                minimum_spacing_m=selectable_node_spacing_m,
+            )
+            if place_labels_path is not None:
+                place_labels = load_node_place_labels(place_labels_path)
+                nodes = attach_node_place_labels(nodes, place_labels)
             self.regions[str(region_key)] = {
                 "key": str(region_key),
                 "label": str(region_settings.get("label", region_key)),
@@ -100,11 +115,7 @@ class DemoApplication:
                 ),
                 "selectable_bounds": selectable_bounds,
                 "selectable_node_spacing_m": selectable_node_spacing_m,
-                "nodes": select_spaced_nodes(
-                    graph,
-                    selectable_bounds,
-                    minimum_spacing_m=selectable_node_spacing_m,
-                ),
+                "nodes": nodes,
                 "profile_cache": OrderedDict(),
             }
         if self.default_region_key not in self.regions:
@@ -280,6 +291,40 @@ def select_spaced_nodes(
         selected.append({"id": str(node_id), "lat": latitude, "lon": longitude})
         spatial_cells.setdefault((cell_x, cell_y), []).append((x_m, y_m))
     return selected
+
+
+def load_node_place_labels(path: Path) -> dict[str, dict[str, object]]:
+    """Load an offline node-to-place mapping generated from OpenStreetMap."""
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    raw_labels = payload.get("nodes", {})
+    if not isinstance(raw_labels, dict):
+        raise ValueError(f"Invalid node place label file: {path}")
+    return {
+        str(node_id): label
+        for node_id, label in raw_labels.items()
+        if isinstance(label, dict)
+    }
+
+
+def attach_node_place_labels(
+    nodes: list[dict[str, float | str]],
+    labels: dict[str, dict[str, object]],
+) -> list[dict[str, float | str]]:
+    """Attach validated English display labels to selectable road nodes."""
+    enriched_nodes = []
+    for node in nodes:
+        enriched = dict(node)
+        label = labels.get(str(node["id"]), {})
+        place_label = str(label.get("label", "")).strip()
+        if place_label:
+            enriched["place_label"] = place_label
+            enriched["place_kind"] = str(label.get("kind", "place"))
+            try:
+                enriched["place_distance_m"] = float(label.get("distance_m", 0.0))
+            except (TypeError, ValueError):
+                enriched["place_distance_m"] = 0.0
+        enriched_nodes.append(enriched)
+    return enriched_nodes
 
 
 def make_handler(application: DemoApplication) -> type[BaseHTTPRequestHandler]:
