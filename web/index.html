@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#dff3ff">
   <title>EcoRoute | 예상 탄소배출을 비교하는 길</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
   <link rel="preconnect" href="https://unpkg.com">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="/styles.css">
@@ -92,7 +94,10 @@
         </fieldset>
 
         <button id="find-routes" class="primary-button" type="button" disabled>
-          친환경 경로 찾기 <span>→</span>
+          친환경 경로 찾기
+          <span class="button-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"></path></svg>
+          </span>
         </button>
         <p id="setup-error" class="form-error" role="alert"></p>
       </aside>
@@ -131,7 +136,9 @@
       </div>
       <aside class="routes-panel">
         <div class="results-heading">
-          <button class="back-button" type="button" data-go-home>←</button>
+          <button class="back-button" type="button" data-go-home aria-label="처음으로 돌아가기">
+            <svg class="nav-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 6-6 6 6 6"></path></svg>
+          </button>
           <div>
             <div class="eyebrow">ROUTE OPTIONS</div>
             <h2 id="routes-title">추천 경로</h2>
@@ -177,7 +184,12 @@
           <p class="impact-disclaimer">동일한 모델·차량·출발시간 조건에서 계산한 상대 비교값입니다. 실제 절대 배출량(g)은 표시하지 않습니다.</p>
         </div>
         <div class="impact-actions">
-          <button id="view-weekly" class="weekly-button" type="button">주간 기록 보기 <span>→</span></button>
+          <button id="view-weekly" class="weekly-button" type="button">
+            주간 기록 보기
+            <span class="button-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"></path></svg>
+            </span>
+          </button>
           <button class="restart-button" type="button" data-go-home>다시 길찾기 <span>↻</span></button>
         </div>
       </div>
@@ -186,7 +198,10 @@
     <section id="weekly-screen" class="screen weekly-screen" aria-labelledby="weekly-title">
       <div class="weekly-shell">
         <div class="weekly-heading">
-          <button id="weekly-back" class="weekly-back" type="button">← 결과로</button>
+          <button id="weekly-back" class="weekly-back" type="button">
+            <svg class="nav-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 6-6 6 6 6"></path></svg>
+            결과로
+          </button>
           <div>
             <div class="eyebrow">WEEKLY ECO REPORT</div>
             <h2 id="weekly-title">이번 주 탄소 절감 기록</h2>
@@ -272,7 +287,10 @@
         </div>
 
         <button id="weekly-next-route" class="weekly-next-button" type="button" data-go-home>
-          다음 경로 찾기 <span>→</span>
+          다음 경로 찾기
+          <span class="button-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"></path></svg>
+          </span>
         </button>
       </div>
     </section>

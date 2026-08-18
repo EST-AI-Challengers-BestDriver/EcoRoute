@@ -22,6 +22,10 @@ const DIESEL_PRICE_KRW_PER_LITER = 1774;
 const CO2_KG_PER_KWH = 8.887 / 33.7;
 const weekDays = ["월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일"];
 const screens = [...document.querySelectorAll(".screen")];
+const RIGHT_CHEVRON = `
+  <span class="button-arrow" aria-hidden="true">
+    <svg viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"></path></svg>
+  </span>`;
 
 function renderIntroStrokeText(target, options) {
   const SVG_NS = "http://www.w3.org/2000/svg";
@@ -571,7 +575,7 @@ function routeCardHtml(route) {
         <span class="metric"><small>총 거리</small><strong>${route.distance_km.toFixed(2)}km</strong></span>
         <span class="metric"><small>예상 탄소배출</small><strong>약 ${route.total_co2_kg.toFixed(3)}kg</strong></span>
       </span>
-      <span class="route-confirm">한 번 더 누르면 이 경로로 안내를 시작합니다 →</span>
+      <span class="route-confirm">한 번 더 누르면 이 경로로 안내를 시작합니다 <svg class="nav-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"></path></svg></span>
     </span>
   </button>`;
 }
@@ -641,7 +645,7 @@ function showImpact(routeId) {
     state.resultRecorded = true;
   }
   document.querySelector("#view-weekly").innerHTML =
-    `주간 기록 보기 (${state.weeklyRecords.length}/7) <span>→</span>`;
+    `주간 기록 보기 (${state.weeklyRecords.length}/7) ${RIGHT_CHEVRON}`;
   showScreen("impact-screen");
 }
 
@@ -787,7 +791,7 @@ function renderWeeklyReport() {
   document.querySelector("#weekly-chart").dataset.weeklyReduction = weeklyReduction.toFixed(1);
   document.querySelector("#weekly-next-route").innerHTML = completed >= 7
     ? '요일별 기록 수정하기 <span>↻</span>'
-    : '다른 요일 경로 찾기 <span>→</span>';
+    : `다른 요일 경로 찾기 ${RIGHT_CHEVRON}`;
 }
 
 function resetDemo() {
