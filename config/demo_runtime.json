@@ -1,0 +1,39 @@
+{
+  "default_region": "ann_arbor",
+  "model_checkpoint_path": "models/dnn/best_model.pt",
+  "route_candidate_count": 4,
+  "penalty_candidate_count": 16,
+  "profile_cache_size": 4,
+  "regions": {
+    "ann_arbor": {
+      "label": "Ann Arbor, MI",
+      "short_label": "Ann Arbor",
+      "graph_path": "data/processed/maps/ann_arbor/ann_arbor_drive_enriched.graphml",
+      "traffic_profile_path": "data/processed/traffic/ann_arbor/edge_hourly_profiles.csv.gz",
+      "route_candidate_count": 4,
+      "penalty_candidate_count": 8,
+      "selectable_bounds": {
+        "south": 42.220321,
+        "west": -83.804639,
+        "north": 42.3257188889,
+        "east": -83.673954
+      },
+      "selectable_node_spacing_m": 400.0
+    },
+    "washtenaw_county": {
+      "label": "Washtenaw County, MI",
+      "short_label": "Washtenaw County",
+      "graph_path": "data/processed/maps/washtenaw_county/washtenaw_county_drive_enriched.graphml",
+      "traffic_profile_path": "data/processed/traffic/washtenaw_county/edge_hourly_profiles.csv.gz",
+      "route_candidate_count": 1,
+      "penalty_candidate_count": 16,
+      "selectable_bounds": {
+        "south": 42.0574742,
+        "west": -84.153363,
+        "north": 42.446432,
+        "east": -83.5090847
+      },
+      "selectable_node_spacing_m": 400.0
+    }
+  }
+}

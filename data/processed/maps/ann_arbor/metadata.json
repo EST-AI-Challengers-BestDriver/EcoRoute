@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-08-11T17:04:25+09:00",
+  "region_key": "ann_arbor",
+  "place": "Ann Arbor, Michigan, USA",
+  "boundary_buffer_m": 3000,
+  "network_type": "drive",
+  "nodes": 5379,
+  "edges": 13485,
+  "bounds_wgs84": {
+    "south": 42.19354,
+    "west": -83.8431678,
+    "north": 42.3545407,
+    "east": -83.6328567
+  },
+  "elevation_tiles": [
+    "N42W084"
+  ],
+  "elevation_source": "https://elevation-tiles-prod.s3.amazonaws.com/skadi",
+  "road_source": "OpenStreetMap via OSMnx",
+  "road_data_attribution": "© OpenStreetMap contributors, ODbL 1.0",
+  "graph_path": "data\\processed\\maps\\ann_arbor\\ann_arbor_drive_enriched.graphml"
+}

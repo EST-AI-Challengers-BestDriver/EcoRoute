@@ -1,0 +1,4 @@
+﻿split,rows,vehicles,trips
+test,35528,165,1791
+train,167635,187,8353
+validation,36111,164,1790

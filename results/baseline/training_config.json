@@ -1,0 +1,33 @@
+{
+  "python_target": "3.14",
+  "generated_at": "2026-08-11T15:55:42+09:00",
+  "random_state": 20260811,
+  "target": "segment_energy_kwh",
+  "features": [
+    "vehicle_weight_kg",
+    "engine_displacement_l",
+    "distance_m",
+    "travel_time_s",
+    "avg_speed_kmh",
+    "speed_std_kmh",
+    "speed_limit_kmh",
+    "congestion_ratio",
+    "stop_ratio",
+    "low_speed_ratio",
+    "avg_gradient",
+    "max_gradient",
+    "min_gradient",
+    "elevation_gain_m",
+    "hour",
+    "weekday"
+  ],
+  "excluded_first_baseline": {
+    "temperature_c": "67.8% missing",
+    "transmission": "not reliably available for service input",
+    "drive_wheels": "not reliably available for service input",
+    "identifiers_and_quality_columns": "tracking/QC only"
+  },
+  "rows": 239274,
+  "model_directory": "models\\baseline",
+  "result_directory": "results\\baseline"
+}

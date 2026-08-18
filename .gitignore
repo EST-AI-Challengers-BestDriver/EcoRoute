@@ -1,0 +1,42 @@
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Editor and operating-system files
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Temporary output
+tmp/
+outputs/
+/ECO_Root_GIT/
+
+# Raw eVED/VED files, documents, preprocessing caches, and training tables
+data/raw/
+data/cache/
+data/docs/
+data/processed/audit/
+data/processed/segments_250m/
+data/processed/trip_profiles/
+
+# Runtime publishes both regions' maps and compressed traffic profiles.
+data/processed/traffic/*/edge_hourly_profiles.csv
+
+# Keep the production DNN checkpoint; ignore any future intermediate checkpoints.
+models/dnn/*
+!models/dnn/best_model.pt
+
+# Keep compact model reports, but exclude large row-level exports and runtime routes.
+results/baseline/predictions.csv
+results/baseline/split_assignments.csv
+results/dnn/predictions.csv
+results/route_energy/
+results/routing/
+results/traffic/
+
+# Local verification code is not part of the frontend/backend handoff bundle.
+tests/

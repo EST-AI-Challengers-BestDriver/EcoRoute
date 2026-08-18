@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b3d2e">
+  <title>EcoRoute | 예상 탄소배출을 비교하는 길</title>
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <button class="brand" type="button" data-go-home aria-label="첫 화면으로">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40"><path d="M31.5 7.7C21 8.1 11.8 12.1 8.2 19.3c-2.4 4.8-.9 9.1 2.6 11.2 4.2 2.5 9.6.7 12.5-3.4 3.6-5.2 3.8-11.6 8.2-19.4Z"/><path class="leaf-line" d="M8.4 31.8c4.3-8.1 10-12.3 17.1-15.5"/></svg>
+      </span>
+      <span>EcoRoute</span>
+    </button>
+    <div class="header-meta">
+      <span class="live-dot"></span>
+      <span id="header-region">Washtenaw County Demo</span>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <section id="setup-screen" class="screen active" aria-labelledby="setup-title">
+      <aside class="setup-panel">
+        <div class="eyebrow">CHECKPOINT 2 · WEB DEMO</div>
+        <h1 id="setup-title">어디로 떠날까요?</h1>
+        <p class="lead">지도 위 도로 노드를 선택하면 모델이 예상 탄소배출이 낮다고 판단한 길을 찾아드려요.</p>
+
+        <div class="location-card">
+          <button id="start-field" class="location-field active" type="button" data-pick="start">
+            <span class="location-symbol start"></span>
+            <span><small>출발지</small><strong>지도에서 출발 노드를 선택하세요</strong></span>
+          </button>
+          <button id="swap-locations" class="swap-button" type="button" aria-label="출발지와 목적지 바꾸기">⇅</button>
+          <div class="location-line"></div>
+          <button id="destination-field" class="location-field" type="button" data-pick="destination">
+            <span class="location-symbol destination"></span>
+            <span><small>목적지</small><strong>지도에서 도착 노드를 선택하세요</strong></span>
+          </button>
+        </div>
+
+        <div class="form-section two-column">
+          <label class="input-group">
+            <span>출발시간</span>
+            <select id="departure-hour" aria-label="출발시간"></select>
+          </label>
+          <label class="input-group">
+            <span>요일</span>
+            <select id="departure-weekday" aria-label="운전 요일"></select>
+          </label>
+        </div>
+
+        <div class="form-section region-section">
+          <div class="input-group">
+            <span>지도 지역</span>
+            <div id="region-selector" class="region-selector" role="group" aria-label="지도 지역 선택"></div>
+          </div>
+        </div>
+
+        <fieldset class="vehicle-section">
+          <legend>차종</legend>
+          <div class="vehicle-grid">
+            <label class="vehicle-card">
+              <input type="radio" name="vehicle" value="compact">
+              <span class="vehicle-icon">🚗</span>
+              <strong>소형차</strong>
+              <small>1.6L</small>
+            </label>
+            <label class="vehicle-card selected">
+              <input type="radio" name="vehicle" value="midsize" checked>
+              <span class="vehicle-icon">🚙</span>
+              <strong>중형차</strong>
+              <small>2.5L</small>
+            </label>
+            <label class="vehicle-card">
+              <input type="radio" name="vehicle" value="truck">
+              <span class="vehicle-icon">🛻</span>
+              <strong>트럭</strong>
+              <small>4.8L</small>
+            </label>
+          </div>
+        </fieldset>
+
+        <button id="find-routes" class="primary-button" type="button" disabled>
+          친환경 경로 찾기 <span>→</span>
+        </button>
+        <p id="setup-error" class="form-error" role="alert"></p>
+      </aside>
+
+      <div class="map-stage">
+        <div id="setup-map" class="map"></div>
+        <div id="pick-hint" class="map-hint"><span></span> 출발 노드를 선택해 주세요</div>
+        <div class="map-note">도로 위 작은 점을 선택하세요 · 선택 위치는 가장 가까운 노드에 맞춰집니다</div>
+      </div>
+    </section>
+
+    <section id="loading-screen" class="screen loading-screen" aria-live="polite">
+      <div class="loading-visual" aria-hidden="true">
+        <div class="loading-ring ring-one"></div>
+        <div class="loading-ring ring-two"></div>
+        <div class="loading-leaf">⌁</div>
+      </div>
+      <div class="eyebrow light">AI ECO NAVIGATION</div>
+      <h2>친환경 경로 생성중...</h2>
+      <p id="loading-step">24시간 교통 프로필을 불러오고 있어요</p>
+      <div class="loading-progress"><span></span></div>
+    </section>
+
+    <section id="routes-screen" class="screen routes-screen" aria-labelledby="routes-title">
+      <div class="results-map-wrap">
+        <div id="routes-map" class="map"></div>
+        <div id="results-region-label" class="results-map-label">WASHTENAW COUNTY · LIVE ROUTE COMPARISON</div>
+      </div>
+      <aside class="routes-panel">
+        <div class="results-heading">
+          <button class="back-button" type="button" data-go-home>←</button>
+          <div>
+            <div class="eyebrow">ROUTE OPTIONS</div>
+            <h2 id="routes-title">추천 경로</h2>
+          </div>
+        </div>
+        <div id="trip-summary" class="trip-summary"></div>
+        <p class="selection-guide"><span>1</span> 경로를 눌러 지도에서 확인하고 <span>2</span> 한 번 더 눌러 안내를 시작하세요.</p>
+        <div id="route-list" class="route-list"></div>
+        <div class="carbon-scope">표시값은 모델이 추정한 휘발유 차량의 주행 중 직접 배출량이며, 실제 배출량과 다를 수 있습니다.</div>
+      </aside>
+    </section>
+
+    <section id="impact-screen" class="screen impact-screen" aria-labelledby="impact-title">
+      <div class="impact-shell">
+        <div class="impact-hero">
+          <div class="impact-icon">✓</div>
+          <div class="eyebrow light">MODEL ESTIMATE</div>
+          <h2 id="impact-title">더 나은 길을 선택했어요</h2>
+          <p id="impact-message"></p>
+          <div class="saving-number"><strong id="impact-comparison">0%</strong><span id="impact-comparison-label">CO₂ 배출 절감</span></div>
+        </div>
+        <div class="impact-card">
+          <div class="impact-card-head">
+            <div>
+              <small>상대 탄소 배출 비교</small>
+              <h3>나의 선택 vs 가장 빠른 길</h3>
+            </div>
+            <div id="comparison-chip" class="saving-chip">가장 빠른 길 대비</div>
+          </div>
+          <div class="bar-chart" aria-label="탄소 배출 비교 그래프">
+            <div class="bar-row">
+              <span>가장 빠른 길</span>
+              <div class="bar-track"><div id="fast-bar" class="bar fast"></div></div>
+              <strong id="fast-carbon">기준 100%</strong>
+            </div>
+            <div class="bar-row">
+              <span>선택한 길</span>
+              <div class="bar-track"><div id="chosen-bar" class="bar eco"></div></div>
+              <strong id="chosen-carbon">100%</strong>
+            </div>
+          </div>
+          <div id="impact-route-meta" class="impact-route-meta"></div>
+          <p class="impact-disclaimer">동일한 모델·차량·출발시간 조건에서 계산한 상대 비교값입니다. 실제 절대 배출량(g)은 표시하지 않습니다.</p>
+        </div>
+        <div class="impact-actions">
+          <button id="view-weekly" class="weekly-button" type="button">주간 기록 보기 <span>→</span></button>
+          <button class="restart-button" type="button" data-go-home>다시 길찾기 <span>↻</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="weekly-screen" class="screen weekly-screen" aria-labelledby="weekly-title">
+      <div class="weekly-shell">
+        <div class="weekly-heading">
+          <button id="weekly-back" class="weekly-back" type="button">← 결과로</button>
+          <div>
+            <div class="eyebrow">WEEKLY ECO REPORT</div>
+            <h2 id="weekly-title">이번 주 탄소 절감 기록</h2>
+            <p>선택한 요일에 기록되며, 같은 요일은 가장 최근 결과로 교체됩니다.</p>
+          </div>
+          <div id="weekly-progress" class="weekly-progress">0 / 7일</div>
+        </div>
+
+        <div class="weekly-summary-grid">
+          <article class="weekly-summary primary">
+            <small id="weekly-total-label">주간 총 CO₂ 절감률</small>
+            <strong id="weekly-total">0.0%</strong>
+            <span>완료한 경로 전체의 가중 상대 비교</span>
+          </article>
+          <article class="weekly-summary">
+            <small>일평균 절감률</small>
+            <strong id="weekly-average">0.0%</strong>
+            <span>현재까지 기록된 요일 기준</span>
+          </article>
+          <article class="weekly-summary">
+            <small>가장 높은 절감</small>
+            <strong id="weekly-best">-</strong>
+            <span id="weekly-best-value">아직 기록이 없습니다</span>
+          </article>
+        </div>
+
+        <div class="weekly-chart-card">
+          <div class="weekly-chart-head">
+            <div>
+              <small>DAILY COMPARISON</small>
+              <h3>월요일부터 일요일까지</h3>
+            </div>
+            <span>가장 빠른 경로 대비 CO₂ 변화율</span>
+          </div>
+          <div class="weekly-chart-wrap">
+            <div id="weekly-chart" class="weekly-chart" aria-label="요일별 탄소 절감률 막대그래프"></div>
+          </div>
+          <p class="weekly-note">각 막대는 해당 요일의 가장 빠른 경로를 기준으로 계산한 상대값입니다. 같은 요일을 다시 기록하면 최신 결과로 교체되며, 기록은 이 탭을 닫으면 삭제됩니다.</p>
+        </div>
+
+        <button id="weekly-next-route" class="weekly-next-button" type="button" data-go-home>
+          다음 경로 찾기 <span>→</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="/app.js"></script>
+</body>
+</html>

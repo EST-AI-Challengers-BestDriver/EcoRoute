@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-08-11T17:06:52+09:00",
+  "region_key": "washtenaw_county",
+  "place": "Washtenaw County, Michigan, USA",
+  "boundary_buffer_m": 1000,
+  "network_type": "drive",
+  "nodes": 14089,
+  "edges": 35676,
+  "bounds_wgs84": {
+    "south": 42.0574742,
+    "west": -84.153363,
+    "north": 42.446432,
+    "east": -83.5090847
+  },
+  "elevation_tiles": [
+    "N42W084",
+    "N42W085"
+  ],
+  "elevation_source": "https://elevation-tiles-prod.s3.amazonaws.com/skadi",
+  "road_source": "OpenStreetMap via OSMnx",
+  "road_data_attribution": "© OpenStreetMap contributors, ODbL 1.0",
+  "graph_path": "data\\processed\\maps\\washtenaw_county\\washtenaw_county_drive_enriched.graphml"
+}
