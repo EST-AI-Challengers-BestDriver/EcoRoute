@@ -3,13 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b3d2e">
+  <meta name="theme-color" content="#dff3ff">
   <title>EcoRoute | 예상 탄소배출을 비교하는 길</title>
   <link rel="preconnect" href="https://unpkg.com">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+  <section id="intro-hero" class="intro-hero" aria-label="EcoRoute 시작 화면">
+    <div class="intro-orb intro-orb-one" aria-hidden="true"></div>
+    <div class="intro-orb intro-orb-two" aria-hidden="true"></div>
+    <div class="intro-content">
+      <div class="intro-kicker"><span></span> LOW-CARBON ROUTE NAVIGATION <span></span></div>
+      <div id="intro-stroke-text"></div>
+      <p>더 가벼운 이동을 위한 스마트 경로</p>
+    </div>
+    <button id="skip-intro" class="skip-intro" type="button" aria-label="시작 화면 건너뛰기">건너뛰기</button>
+  </section>
+
   <header class="app-header">
     <button class="brand" type="button" data-go-home aria-label="첫 화면으로">
       <span class="brand-mark" aria-hidden="true">
@@ -17,16 +28,11 @@
       </span>
       <span>EcoRoute</span>
     </button>
-    <div class="header-meta">
-      <span class="live-dot"></span>
-      <span id="header-region">Washtenaw County Demo</span>
-    </div>
   </header>
 
   <main class="app-main">
     <section id="setup-screen" class="screen active" aria-labelledby="setup-title">
       <aside class="setup-panel">
-        <div class="eyebrow">CHECKPOINT 2 · WEB DEMO</div>
         <h1 id="setup-title">어디로 떠날까요?</h1>
         <p class="lead">지도 위 도로 노드를 선택하면 모델이 예상 탄소배출이 낮다고 판단한 길을 찾아드려요.</p>
 
@@ -93,8 +99,6 @@
 
       <div class="map-stage">
         <div id="setup-map" class="map"></div>
-        <div id="pick-hint" class="map-hint"><span></span> 출발 노드를 선택해 주세요</div>
-        <div class="map-note">도로 위 작은 점을 선택하세요 · 선택 위치는 가장 가까운 노드에 맞춰집니다</div>
       </div>
     </section>
 
@@ -113,7 +117,6 @@
     <section id="routes-screen" class="screen routes-screen" aria-labelledby="routes-title">
       <div class="results-map-wrap">
         <div id="routes-map" class="map"></div>
-        <div id="results-region-label" class="results-map-label">WASHTENAW COUNTY · LIVE ROUTE COMPARISON</div>
       </div>
       <aside class="routes-panel">
         <div class="results-heading">

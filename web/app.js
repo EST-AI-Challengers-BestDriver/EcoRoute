@@ -20,6 +20,173 @@ const WEEKLY_STORAGE_KEY = "ecoroute-weekly-records-v2";
 const weekDays = ["월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일"];
 const screens = [...document.querySelectorAll(".screen")];
 
+function renderIntroStrokeText(target, options) {
+  const SVG_NS = "http://www.w3.org/2000/svg";
+  const svgNode = (name, attributes = {}) => {
+    const node = document.createElementNS(SVG_NS, name);
+    Object.entries(attributes).forEach(([key, value]) => node.setAttribute(key, String(value)));
+    return node;
+  };
+  const addCharacters = (textNode, kind) => {
+    Array.from(options.text).forEach((character) => {
+      const span = svgNode("tspan");
+      span.dataset[kind] = "";
+      span.textContent = character;
+      textNode.appendChild(span);
+    });
+  };
+
+  target.replaceChildren();
+  target.className = "stroke-text";
+  target.setAttribute("role", "img");
+  target.setAttribute("aria-label", options.text);
+  target.style.setProperty("--stroke-text-height", `${Math.round(options.fontSize * 1.3)}px`);
+
+  const svg = svgNode("svg", {
+    class: "stroke-text__svg",
+    viewBox: `0 ${-options.fontSize} 600 ${options.fontSize * 1.3}`,
+    preserveAspectRatio: "xMidYMid meet",
+    "aria-hidden": "true",
+  });
+  const clipId = `intro-text-wipe-${Math.random().toString(36).slice(2, 9)}`;
+  const defs = svgNode("defs");
+  const clipPath = svgNode("clipPath", { id: clipId, clipPathUnits: "userSpaceOnUse" });
+  const wipeRect = svgNode("rect", { x: 0, y: 0, width: 0, height: 0 });
+  clipPath.appendChild(wipeRect);
+  defs.appendChild(clipPath);
+  svg.appendChild(defs);
+
+  const commonTextStyle = (node) => {
+    node.style.fontSize = `${options.fontSize}px`;
+    node.style.fontWeight = String(options.fontWeight);
+    node.style.letterSpacing = `${options.letterSpacing}px`;
+  };
+  const strokeText = svgNode("text", {
+    class: "stroke-text__stroke",
+    x: 0,
+    y: 0,
+    fill: "none",
+    stroke: options.strokeColor,
+    "stroke-width": options.strokeWidth,
+    "stroke-linejoin": "round",
+    "stroke-linecap": "round",
+  });
+  commonTextStyle(strokeText);
+  addCharacters(strokeText, "strokeChar");
+
+  const fillText = svgNode("text", {
+    class: "stroke-text__fill",
+    x: 0,
+    y: 0,
+    fill: options.fillColor,
+    "clip-path": `url(#${clipId})`,
+  });
+  commonTextStyle(fillText);
+  addCharacters(fillText, "fillChar");
+  svg.append(strokeText, fillText);
+  target.appendChild(svg);
+
+  const startAnimation = async () => {
+    if (document.fonts?.ready) {
+      try { await document.fonts.ready; } catch { /* Use the active fallback font. */ }
+    }
+    await new Promise((resolve) => requestAnimationFrame(resolve));
+    const bounds = strokeText.getBBox();
+    if (!bounds?.width) return;
+    const padding = Math.max(options.strokeWidth, options.fontSize * .1);
+    const box = {
+      x: bounds.x - padding,
+      y: bounds.y - padding,
+      width: bounds.width + padding * 2,
+      height: bounds.height + padding * 2,
+    };
+    svg.setAttribute("viewBox", `${box.x} ${box.y} ${box.width} ${box.height}`);
+    wipeRect.setAttribute("x", box.x);
+    wipeRect.setAttribute("y", box.y);
+    wipeRect.setAttribute("width", box.width);
+    wipeRect.setAttribute("height", box.height);
+
+    const strokes = [...target.querySelectorAll("[data-stroke-char]")];
+    const dash = Math.max(options.fontSize * 7, 200);
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      strokes.forEach((stroke) => {
+        stroke.style.strokeDasharray = String(dash);
+        stroke.style.strokeDashoffset = "0";
+      });
+      return;
+    }
+
+    strokes.forEach((stroke, index) => {
+      stroke.style.strokeDasharray = String(dash);
+      stroke.style.strokeDashoffset = String(dash);
+      stroke.animate(
+        [{ strokeDashoffset: dash }, { strokeDashoffset: 0 }],
+        {
+          duration: options.drawDuration * 1000,
+          delay: index * options.stagger * 1000,
+          easing: "cubic-bezier(.25,.46,.45,.94)",
+          fill: "forwards",
+        },
+      );
+    });
+    wipeRect.style.transformBox = "fill-box";
+    wipeRect.style.transformOrigin = "left center";
+    wipeRect.animate(
+      [{ transform: "scaleX(0)" }, { transform: "scaleX(1)" }],
+      {
+        duration: Math.max(400, options.drawDuration * 500),
+        delay: (options.drawDuration + options.fillDelay) * 1000,
+        easing: "cubic-bezier(.45,0,.55,1)",
+        fill: "both",
+      },
+    );
+  };
+  startAnimation();
+}
+
+function initializeIntroHero() {
+  const hero = document.querySelector("#intro-hero");
+  const skipButton = document.querySelector("#skip-intro");
+  if (!hero) return;
+  document.body.classList.add("intro-active");
+
+  let dismissed = false;
+  let dismissTimer = null;
+  const dismiss = () => {
+    if (dismissed) return;
+    dismissed = true;
+    window.clearTimeout(dismissTimer);
+    document.body.classList.remove("intro-active");
+    hero.classList.add("leaving");
+    window.setTimeout(() => hero.remove(), 720);
+  };
+
+  const strokeTarget = document.querySelector("#intro-stroke-text");
+  if (strokeTarget) {
+    renderIntroStrokeText(strokeTarget, {
+      text: "ECOROUTE",
+      strokeColor: "#2f80ed",
+      fillColor: "#f5fcff",
+      strokeWidth: 1.6,
+      drawDuration: 1.05,
+      fillDelay: 0.12,
+      stagger: 0.04,
+      fontSize: 132,
+      fontWeight: 850,
+      letterSpacing: -5,
+    });
+  } else {
+    hero.classList.add("intro-fallback");
+  }
+
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  dismissTimer = window.setTimeout(dismiss, reducedMotion ? 700 : 2350);
+  skipButton?.addEventListener("click", dismiss, { once: true });
+  hero.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" || event.key === "Enter" || event.key === " ") dismiss();
+  });
+}
+
 function showScreen(id) {
   screens.forEach((screen) => screen.classList.toggle("active", screen.id === id));
   if (id === "setup-screen") setTimeout(() => state.setupMap?.invalidateSize(), 80);
@@ -57,20 +224,12 @@ async function initialize() {
     const response = await fetch("/api/config");
     if (!response.ok) throw new Error("지도 설정을 불러오지 못했습니다.");
     state.config = await response.json();
-    renderRegionLabels();
     renderRegionSelector();
     initializeSetupMap();
     bindEvents();
   } catch (error) {
     document.querySelector("#setup-error").textContent = error.message;
   }
-}
-
-function renderRegionLabels() {
-  const label = state.config.region_label || state.config.region;
-  document.querySelector("#header-region").textContent = `${label} Demo`;
-  document.querySelector("#results-region-label").textContent =
-    `${label.toUpperCase()} · LIVE ROUTE COMPARISON`;
 }
 
 function renderRegionSelector() {
@@ -100,7 +259,6 @@ async function selectRegion(regionKey) {
     state.nodesLayer = null;
     state.markers = { start: null, destination: null };
     state.config = payload;
-    renderRegionLabels();
     renderRegionSelector();
     initializeSetupMap();
     document.querySelector("#start-field strong").textContent = "지도에서 출발 노드를 선택하세요";
@@ -125,7 +283,7 @@ function initializeSetupMap() {
   const { nodes } = state.config;
   const selectionBounds = boundsFromConfig();
   state.setupMap = L.map("setup-map", {
-    zoomControl: true,
+    zoomControl: false,
     preferCanvas: true,
     maxBounds: selectionBounds.pad(.06),
     maxBoundsViscosity: 1,
@@ -141,7 +299,7 @@ function initializeSetupMap() {
       radius: 4,
       weight: 1.5,
       color: "#ffffff",
-      fillColor: "#12875c",
+      fillColor: "#269fde",
       fillOpacity: .78,
       interactive: false,
     }).addTo(state.nodesLayer);
@@ -153,8 +311,6 @@ function initializeSetupMap() {
     if (selectionBounds.contains(latlng)) selectNearestNode(latlng);
     else showTemporaryMapHint("선택 가능한 사각형 안을 눌러 주세요");
   });
-  document.querySelector(".map-note").textContent =
-    `실제 관측 영역 · 주요 선택 노드 ${state.config.selectable_node_count.toLocaleString("ko-KR")}개`;
 }
 
 function boundsFromConfig() {
@@ -170,7 +326,7 @@ function addCoverageFrame(map, bounds) {
   const pad = 3;
   const maskStyle = {
     stroke: false,
-    fillColor: "#dce7e1",
+    fillColor: "#dceef8",
     fillOpacity: .82,
     interactive: false,
   };
@@ -181,7 +337,7 @@ function addCoverageFrame(map, bounds) {
     [[south, east], [north, east + pad]],
   ].forEach((rectangle) => L.rectangle(rectangle, maskStyle).addTo(map));
   L.rectangle(bounds, {
-    color: "#0b6d4d",
+    color: "#238bc5",
     weight: 2,
     opacity: .8,
     fill: false,
@@ -191,12 +347,12 @@ function addCoverageFrame(map, bounds) {
 }
 
 function showTemporaryMapHint(message) {
-  const hint = document.querySelector("#pick-hint");
-  const original = state.pickMode === "start"
-    ? " 출발 노드를 선택해 주세요"
-    : " 도착 노드를 선택해 주세요";
-  hint.lastChild.textContent = ` ${message}`;
-  window.setTimeout(() => { hint.lastChild.textContent = original; }, 1500);
+  document.querySelector("#setup-error").textContent = message;
+  window.setTimeout(() => {
+    if (document.querySelector("#setup-error").textContent === message) {
+      document.querySelector("#setup-error").textContent = "";
+    }
+  }, 1500);
 }
 
 function nearestNode(latlng) {
@@ -225,7 +381,7 @@ function setPoint(kind, node) {
   const isStart = kind === "start";
   state.markers[kind] = L.circleMarker([node.lat, node.lon], {
     radius: 9, color: "#fff", weight: 3,
-    fillColor: isStart ? "#19a96b" : "#ff5961", fillOpacity: 1,
+    fillColor: isStart ? "#22b6e8" : "#ff5961", fillOpacity: 1,
   }).addTo(state.setupMap).bindTooltip(isStart ? "출발" : "도착", {
     permanent: true, direction: "top", offset: [0, -8], className: "node-tooltip",
   });
@@ -239,9 +395,6 @@ function setPickMode(kind) {
   document.querySelectorAll(".location-field").forEach((field) => {
     field.classList.toggle("active", field.dataset.pick === kind);
   });
-  const hint = document.querySelector("#pick-hint");
-  hint.classList.toggle("destination", kind === "destination");
-  hint.lastChild.textContent = kind === "start" ? " 출발 노드를 선택해 주세요" : " 도착 노드를 선택해 주세요";
 }
 
 function updateSubmitState() {
@@ -345,7 +498,7 @@ function renderRouteResults() {
   const { center } = state.config;
   const selectionBounds = boundsFromConfig();
   state.routesMap = L.map("routes-map", {
-    zoomControl: true,
+    zoomControl: false,
     maxBounds: selectionBounds.pad(.08),
     maxBoundsViscosity: 1,
     maxZoom: 17,
@@ -620,4 +773,5 @@ function resetDemo() {
   showScreen("setup-screen");
 }
 
+initializeIntroHero();
 initialize();
